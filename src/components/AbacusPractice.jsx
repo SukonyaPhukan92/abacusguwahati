@@ -68,6 +68,13 @@ export default function AbacusPractice() {
           </div>
         </div>
 
+        <aside className="practice-hint" aria-label="Abacus bead values">
+          <span className="practice-hint-title">Quick hint</span>
+          <span><strong>1</strong> = one lower bead</span>
+          <span><strong>4</strong> = all four lower beads</span>
+          <span>Upper bead = <strong>5</strong></span>
+        </aside>
+
         <div className="practice-board" aria-label="Interactive five-column abacus">
           {places.map((place, index) => {
             const digit = digits[index]

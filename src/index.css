@@ -30,7 +30,10 @@
 .practice-score { padding: .25rem .55rem; border-radius: 999px; background: rgba(255,255,255,.14); color: #fff4d5; font-size: .75rem; font-weight: 800; }
 .practice-challenge strong { display: flex; align-items: center; gap: .75rem; margin-top: .45rem; font-size: 1.8rem; font-variant-numeric: tabular-nums; }
 .practice-plus { color: #ffc45b; }
-.practice-board { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); max-width: 52rem; margin: 2.25rem auto 0; overflow: hidden; border: 9px solid #754225; border-radius: 16px; background: #c9824d; box-shadow: inset 0 0 0 2px rgba(255,239,215,.2), 0 9px 0 #59301f, 0 18px 32px rgba(61,43,31,.16); }
+.practice-hint { display: flex; max-width: 52rem; flex-wrap: wrap; align-items: center; gap: .5rem 1.25rem; margin: 1.5rem auto 0; padding: .75rem 1rem; border-left: 4px solid #087e83; background: rgba(255,255,255,.78); color: rgba(46,43,51,.8); font-size: .9rem; }
+.practice-hint-title { color: #087e83; font-size: .72rem; font-weight: 900; text-transform: uppercase; }
+.practice-hint strong { color: #a83225; font-size: 1.05rem; }
+.practice-board { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); max-width: 52rem; margin: 1.25rem auto 0; overflow: hidden; border: 9px solid #754225; border-radius: 16px; background: #c9824d; box-shadow: inset 0 0 0 2px rgba(255,239,215,.2), 0 9px 0 #59301f, 0 18px 32px rgba(61,43,31,.16); }
 .practice-rod { position: relative; display: flex; min-width: 0; flex-direction: column; align-items: center; padding: .7rem .25rem .55rem; background: linear-gradient(90deg, #efd3ad, #fff0d8 48%, #e9c89e); }
 .practice-rod:nth-child(even) { background: linear-gradient(90deg, #f5dfbf, #fff6e9 48%, #edd2aa); }
 .practice-rod + .practice-rod { border-left: 2px solid rgba(99,58,37,.25); }
@@ -63,7 +66,9 @@
 @media (max-width: 640px) {
   .practice-heading { align-items: stretch; flex-direction: column; gap: 1.1rem; }
   .practice-challenge { min-width: 0; align-self: stretch; }
-  .practice-board { margin-top: 1.7rem; border-width: 5px; border-radius: 11px; }
+  .practice-hint { gap: .45rem .9rem; margin-top: 1.1rem; padding: .65rem .75rem; font-size: .82rem; }
+  .practice-hint-title { width: 100%; }
+  .practice-board { margin-top: .9rem; border-width: 5px; border-radius: 11px; }
   .practice-rod { padding-inline: .1rem; }
   .practice-place { font-size: .62rem; }
   .practice-place-value { font-size: .65rem; }
