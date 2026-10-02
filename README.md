@@ -14,6 +14,9 @@ npm run preview
 ## Deploy to Netlify
 The Netlify site is connected to this GitHub repository and deploys from `main`. Netlify runs `npm run build` and publishes `dist/`, as configured in `netlify.toml`. Push changes to `main` to trigger a production deployment. The public site is `https://abacusguwahati.netlify.app/`.
 
+## Recent updates
+- **Gallery captions:** Updated mixed-uniform classroom photo caption to "Learning in progress" for both English and Assamese versions (2 Oct 2026).
+
 ## Site features
 - English and Assamese language switch, with localized page titles and meta descriptions.
 - Enquiry form that opens WhatsApp with a prepared message. The visitor must press **Send** in WhatsApp; the website does not send the message itself.
