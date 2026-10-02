@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+  body { @apply bg-brand-50 text-ink font-display antialiased; }
+  :focus-visible { @apply outline-none ring-4 ring-indigo-500 ring-offset-2 ring-offset-white; }
+}
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 py-3 font-bold transition duration-200 hover:-translate-y-0.5 active:translate-y-0; }
+  .btn-primary { @apply bg-brand-600 text-white shadow-card hover:bg-brand-700; }
+  .btn-secondary { @apply bg-white text-ink border-2 border-ink/15 hover:border-ink/40; }
+  .card { @apply rounded-3xl bg-white p-6 shadow-card; }
+  .section { @apply mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24; }
+  .eyebrow { @apply text-sm font-bold uppercase tracking-widest text-brand-600; }
+  .h2 { @apply mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl; }
+  .field { @apply mt-1 block w-full rounded-2xl border-2 border-ink/20 bg-white px-4 py-3 text-base; }
+  .field[aria-invalid='true'] { @apply border-red-600; }
+}
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .animate-bead, .animate-floaty { animation: none !important; }
+  * { transition-duration: .01ms !important; }
+}
