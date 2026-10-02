@@ -1,4 +1,5 @@
-import { waBase, enquireHref } from '../lib/contact.js'
+import { waBase, getEnquireHref } from '../lib/contact.js'
+import { useLanguage } from '../i18n.jsx'
 
 export function WhatsAppIcon({ className = 'h-5 w-5' }) {
   return (
@@ -9,18 +10,19 @@ export function WhatsAppIcon({ className = 'h-5 w-5' }) {
 }
 
 /** "Enquire" call-to-action: opens WhatsApp with a prefilled message when a WhatsApp number is set. */
-export default function EnquireLink({ children = 'Enquire About a Demo', className = '', onClick }) {
+export default function EnquireLink({ children, className = '', onClick }) {
+  const { language, t } = useLanguage()
   const external = Boolean(waBase)
   return (
     <a
-      href={enquireHref}
+      href={getEnquireHref(language)}
       onClick={onClick}
       className={className}
       {...(external && { target: '_blank', rel: 'noopener noreferrer' })}
     >
       {external && <WhatsAppIcon />}
-      {children}
-      {external && <span className="sr-only"> on WhatsApp (opens in a new tab)</span>}
+      {children ?? t('common.enquireDemo')}
+      {external && <span className="sr-only">{t('common.whatsappNewTab')}</span>}
     </a>
   )
 }

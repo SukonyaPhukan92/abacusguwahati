@@ -4,26 +4,31 @@ export const telHref = centre.phone ? `tel:${centre.phone}` : null
 export const waBase = centre.whatsapp ? `https://wa.me/${centre.whatsapp}` : null
 
 // Used by every "Enquire" button: opens WhatsApp with a ready-to-send message (falls back to the form).
-export const waEnquiryText = `Hello ${centre.name}, I would like to enquire about a demo class for my child.`
-export const enquireHref = waBase ? `${waBase}?text=${encodeURIComponent(waEnquiryText)}` : '#contact'
+export function getEnquireHref(language) {
+  if (!waBase) return '#contact'
+  const message = language === 'as'
+    ? 'নমস্কাৰ SIP Abacus, মোৰ শিশুৰ বাবে ডেমো ক্লাছৰ বিষয়ে সুধিব বিচাৰোঁ।'
+    : `Hello ${centre.name}, I would like to enquire about a demo class for my child.`
+  return `${waBase}?text=${encodeURIComponent(message)}`
+}
 
-export function validate({ name, phone, message }) {
+export function validate({ name, phone, message }, t) {
   const errors = {}
-  if (!name.trim()) errors.name = 'Please enter the parent or guardian name.'
-  else if (name.trim().length < 2) errors.name = 'Name looks too short.'
+  if (!name.trim()) errors.name = t('contact.errorNameRequired')
+  else if (name.trim().length < 2) errors.name = t('contact.errorNameShort')
   const digits = phone.replace(/[\s-]/g, '').replace(/^(\+91|91|0)/, '')
-  if (!phone.trim()) errors.phone = 'Please enter a contact number.'
-  else if (!/^[6-9]\d{9}$/.test(digits)) errors.phone = 'Enter a valid 10-digit Indian mobile number.'
-  if (message.length > 500) errors.message = 'Please keep the message under 500 characters.'
+  if (!phone.trim()) errors.phone = t('contact.errorPhoneRequired')
+  else if (!/^[6-9]\d{9}$/.test(digits)) errors.phone = t('contact.errorPhoneInvalid')
+  if (message.length > 500) errors.message = t('contact.errorMessageLong')
   return errors
 }
 
-export function buildMessage({ name, phone, message }) {
+export function buildMessage({ name, phone, message }, t) {
   return [
-    `Hello ${centre.name}, I would like to enquire about a demo.`,
-    `Parent/guardian: ${name.trim()}`,
-    `Contact number: ${phone.trim()}`,
-    message.trim() ? `Message: ${message.trim()}` : null,
+    t('contact.messageGreeting'),
+    t('contact.messageParent', { name: name.trim() }),
+    t('contact.messagePhone', { phone: phone.trim() }),
+    message.trim() ? t('contact.messageBody', { message: message.trim() }) : null,
   ].filter(Boolean).join('\n')
 }
 

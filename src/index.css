@@ -5,6 +5,8 @@
 @layer base {
   html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
   body { @apply bg-brand-50 text-ink font-display antialiased; }
+  html:lang(as) body { font-family: 'Noto Sans Assamese', 'Nirmala UI', 'Noto Sans', sans-serif; }
+  html:lang(as) .eyebrow { letter-spacing: 0; text-transform: none; }
   :focus-visible { @apply outline-none ring-4 ring-indigo-500 ring-offset-2 ring-offset-white; }
 }
 @layer components {
@@ -18,6 +20,10 @@
   .field { @apply mt-1 block w-full rounded-2xl border-2 border-ink/20 bg-white px-4 py-3 text-base; }
   .field[aria-invalid='true'] { @apply border-red-600; }
 }
+  .language-switch { display: inline-flex; flex: 0 0 auto; gap: 2px; padding: 3px; border: 1px solid rgba(46,43,51,.14); border-radius: 999px; background: #fffaf2; }
+  .language-switch button { min-height: 2rem; padding: .35rem .55rem; border-radius: 999px; color: #31584c; font-size: .75rem; font-weight: 800; white-space: nowrap; }
+  .language-switch button[aria-pressed='true'] { background: #2e514b; color: white; }
+  .language-switch button:focus-visible { outline: 3px solid #087e83; outline-offset: 2px; }
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.in { opacity: 1; transform: none; }
 .abacus-practice { position: relative; isolation: isolate; overflow: hidden; border-block: 1px solid rgba(46,43,51,.1); background-color: #fffaf2; background-image: repeating-linear-gradient(0deg, transparent 0 39px, rgba(46,43,51,.025) 39px 40px), repeating-linear-gradient(90deg, transparent 0 39px, rgba(46,43,51,.025) 39px 40px); }
