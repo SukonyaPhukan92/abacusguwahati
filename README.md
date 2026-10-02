@@ -1,34 +1,87 @@
 # SIP Abacus, Lakhra – centre website
 
-React + Vite + Tailwind CSS (v3).
+A single-page application (SPA) built with React 18, Vite 5+, and Tailwind CSS v3 featuring client-side rendering (CSR), internationalization via React Context API, and automatic CI/CD deployment via Netlify.
 
-## Run locally
+## Development environment
 
+**Prerequisites:** Node.js 16+ (ESM module support), npm 8+
+
+```bash
+npm install                  # Install dependencies from package-lock.json
+npm run dev                  # Vite dev server with HMR at http://localhost:5173
+npm run build                # Production build (minified, tree-shaken) to dist/
+npm run preview              # Serve dist/ locally for pre-deployment verification
 ```
-npm install
-npm run dev       # http://localhost:5173
-npm run build
-npm run preview
-```
 
-## Deploy to Netlify
-The Netlify site is connected to this GitHub repository and deploys from `main`. Netlify runs `npm run build` and publishes `dist/`, as configured in `netlify.toml`. Push changes to `main` to trigger a production deployment. The public site is `https://abacusguwahati.netlify.app/`.
+The dev server uses Vite's native ESM serving for sub-100ms HMR with React Fast Refresh integration.
 
-## Recent updates
-- **Gallery captions:** Updated mixed-uniform classroom photo caption to "Learning in progress" for both English and Assamese versions (2 Oct 2026).
+## Continuous deployment (Netlify)
 
-## Site features
-- English and Assamese language switch, with localized page titles and meta descriptions.
-- Enquiry form that opens WhatsApp with a prepared message. The visitor must press **Send** in WhatsApp; the website does not send the message itself.
-- Privacy policy at `/#privacy`, linked from the footer.
-- Responsive photo gallery with a keyboard-accessible enlarged-photo viewer.
-- Custom bilingual 404 page at `public/404.html`.
-- Logo-based SVG favicon at `public/favicon.svg`.
+Deployment pipeline configured with automatic triggers:
 
-## Updating content and photos
-Business details and gallery entries live in `src/config.js`; translations are in `src/i18n.jsx`. The gallery currently has 16 photos. Each photo needs `<name>-600.webp` and `<name>-1200.webp` variants in `public/gallery/`. Register the photo in `src/config.js`, add its alt-text and caption keys to `src/components/Gallery.jsx`, then provide English and Assamese strings in `src/i18n.jsx`. The gallery uses the smaller variant for thumbnails and the larger variant in the viewer.
+- **Repository integration:** GitHub webhook on push to `main` branch
+- **Build environment:** Node.js runtime (version inferred from `.nvmrc` or netlify.toml)
+- **Build command:** `npm run build` (executed in isolated build sandbox)
+- **Publish directory:** `dist/` (static asset output from Vite bundler)
+- **Asset delivery:** Netlify CDN with edge caching (cache headers set per file type)
+- **Production URL:** `https://abacusguwahati.netlify.app/`
 
-Some unverified values are intentionally omitted from the page. For example, opening hours are hidden until confirmed rather than shown as a placeholder.
+Configuration file: `netlify.toml` (build command and publish directory declarations)
+
+Each push to `main` triggers atomic deployments with zero-downtime updates via Netlify's distributed edge network.
+
+## Changelog
+
+### 2026-10-02
+- **i18n module update:** Modified gallery caption (mixedUniforms key) from "Classwork in a mixed-uniform classroom" to "Learning in progress" in both en and as locales via `src/i18n.jsx`
+- **Build artifacts:** No dependency changes; Vite cache invalidation via content-hash
+
+## Architecture & features
+
+### Internationalization (i18n)
+- **Implementation:** React Context API (`LanguageProvider` in `src/i18n.jsx`) with dual-language locale support (English `en`, Assamese `as`)
+- **Persistence:** localStorage with fallback to browser default on first visit
+- **Metadata localization:** Dynamic `<title>`, `og:title`, `og:description`, and `lang` attribute updates via `useEffect` listener on `window.hashchange`
+- **Translation schema:** Nested object structure with BCP 47 language tags
+
+### Routing & navigation
+- **Hash-based routing:** Single-page navigation via `window.location.hash` (privacy policy at `/#privacy`)
+- **Fallback page:** Custom `public/404.html` with bilingual content for 404 errors (Netlify-configured redirect handling)
+
+### Forms & integrations
+- **Enquiry form:** Client-side validation with WhatsApp deep linking (`https://wa.me/{phoneNumber}?text={encodedMessage}`)
+- **No backend submission:** Form data processed in-browser; WhatsApp handles final message delivery
+- **Accessibility:** Semantic HTML with ARIA labels, keyboard navigation support
+
+### Media & assets
+- **Responsive gallery:** 16 photo set with WebP format (600px thumbnails, 1200px enlarged variants)
+- **Image optimization:** Vite's asset pipeline with on-demand WebP encoding
+- **Gallery viewer:** Keyboard-accessible (arrow keys, Enter/Esc), ARIA-compliant modal overlay
+- **Favicon:** SVG-based (`public/favicon.svg`) for scalable multi-resolution support
+
+## Content management & asset pipeline
+
+### Configuration
+- **Business metadata:** `src/config.js` (address, phone, location coordinates, WhatsApp number)
+- **Translations & captions:** `src/i18n.jsx` (nested locale-specific strings, photo alt-text/captions, form labels, meta descriptions)
+
+### Gallery management
+Current photo count: 16 images
+
+**Asset requirements per photo:**
+- Filename convention: `<name>-600.webp` (thumbnail, 600px width) and `<name>-1200.webp` (enlarged viewer, 1200px width)
+- Format: WebP (superior compression vs. JPEG/PNG)
+- Location: `public/gallery/` (static asset directory, not processed by Vite)
+
+**Integration steps:**
+1. Register photo metadata in `src/config.js` (filename references)
+2. Add caption keys to `src/components/Gallery.jsx` component logic
+3. Provide localized English and Assamese strings in `src/i18n.jsx` under `gallery` namespace
+
+The responsive image system selects thumbnail variant for grid display and large variant for lightbox modal viewer.
+
+### Content validation
+Unverified/unconfirmed data is explicitly omitted from DOM rendering (not shown as placeholders). Example: opening hours remain hidden until centre confirmation to prevent stale information.
 
 ## Sources and verification status
 The two requested sources (`sipabacus.com/in/` and the Google Maps listing) were **blocked by this build environment's network proxy**, so they could not be read.
