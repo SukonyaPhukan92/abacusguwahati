@@ -20,11 +20,13 @@ export default function Footer() {
           {telHref && <p><a className="underline" href={telHref}>{centre.phoneDisplay}</a></p>}
           {waBase && <p><a className="underline" href={waBase} target="_blank" rel="noopener noreferrer">{t('footer.whatsapp')}</a></p>}
           <p><a className="underline" href={centre.mapsUrl} target="_blank" rel="noopener noreferrer">{t('footer.viewMaps')}</a></p>
+          <p><a className="underline" href="#privacy">{t('footer.privacyLink')}</a></p>
           {social.map(([n, u]) => <p key={n}><a className="capitalize underline" href={u} target="_blank" rel="noopener noreferrer">{n}</a></p>)}
         </div>
       </div>
       <div className="border-t border-white/10 px-4 py-6 text-center text-sm">
         <p><strong>{t('footer.privacy')}</strong> {t('footer.privacyRest')} {waBase ? t('footer.whatsapp') : centre.email ? t('footer.emailApp') : t('footer.copyOnly')} {t('footer.sendNote')}</p>
+        <p className="mt-3 text-white/60">{t('footer.copyright', { year: 2026 })}</p>
       </div>
     </footer>
   )

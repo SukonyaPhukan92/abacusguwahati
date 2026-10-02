@@ -57,21 +57,21 @@ export const programmes = [
     id: 'abacus',
     name: 'Abacus & Mental Arithmetic',
     description:
-      'Children learn to work with the abacus and gradually move on to calculating in the mind, in a structured, step-by-step programme.',
+      'Children learn to work with the abacus and gradually move on to mental calculation in a structured, step-by-step programme.',
     // A centre certificate shows "Junior Level 1 … SIP Abacus Junior programme at SIP Lakhra".
-    localNote: 'Offered at Lakhra – a SIP Lakhra certificate shows Junior Level 1 of the SIP Abacus Junior programme.',
+    localNote: 'Offered in Lakhra — a SIP Lakhra certificate shows Junior Level 1 of the SIP Abacus Junior programme.',
   },
   {
     id: 'brain-gym',
     name: 'Brain Gym',
     description:
-      'Short, playful activities described by SIP Abacus as part of its programme to support focus and coordination.',
+      'Short, playful activities designed to support focus and coordination as part of the SIP Abacus programme.',
   },
   {
     id: 'speed-writing',
     name: 'Speed Writing',
     description:
-      'Handwriting-focused practice that SIP Abacus lists alongside abacus and Brain Gym.',
+      'Handwriting-focused practice listed alongside abacus and Brain Gym in the SIP Abacus programme.',
   },
 ]
 
@@ -102,17 +102,17 @@ export const aboutImage = gallery[2]
 // Public Google Maps reviews of this centre, copied from the listing on 29 Sep 2026.
 export const testimonials = [
   {
-    quote: 'My child has shown great improvement in concentration and mental math after joining the abacus classes. The teacher is supportive, and explains every concept clearly.',
+    quote: 'My child has shown great improvement in concentration and mental maths after joining the abacus classes. The teacher is supportive and explains every concept clearly.',
     name: 'Priti Das',
     source: 'Google review',
   },
   {
-    quote: 'I found very good improvement in my daughter. And teachers are very nice and kind. They guide my daughter and all the students very sweetly.',
+    quote: 'I have seen very good improvement in my daughter. The teachers are kind and supportive, and they guide my daughter and all the students very gently.',
     name: 'Deepika Das',
     source: 'Google review',
   },
   {
-    quote: "It's being new and exciting experience for my child. Hope it will be great learning and confidence building for future ahead.",
+    quote: 'This is a new and exciting experience for my child. I hope it will bring great learning and confidence-building opportunities in the future.',
     name: 'Chatrajit Sinha',
     source: 'Google review',
   },

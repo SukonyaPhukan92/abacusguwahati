@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
 import AbacusPractice from './components/AbacusPractice.jsx'
@@ -9,6 +10,7 @@ import Footer from './components/Footer.jsx'
 import MobileBar from './components/MobileBar.jsx'
 import useReveal from './lib/useReveal.js'
 import { centre } from './config.js'
+import { useLanguage } from './i18n.jsx'
 
 // Structured data: only verified fields; optional ones are added when filled in config.js. No ratings/reviews.
 function jsonLd() {
@@ -33,7 +35,62 @@ function jsonLd() {
 }
 
 export default function App() {
+  const { t } = useLanguage()
+  const [hash, setHash] = useState(() => window.location.hash)
+
+  useEffect(() => {
+    const updateHash = () => setHash(window.location.hash)
+    updateHash()
+    window.addEventListener('hashchange', updateHash)
+    return () => window.removeEventListener('hashchange', updateHash)
+  }, [])
+
   useReveal()
+
+  if (hash === '#privacy') {
+    return (
+      <>
+        <Header />
+        <main id="main" className="bg-stone-50">
+          <section className="section reveal mx-auto max-w-4xl py-12">
+            <div className="rounded-[2rem] border border-ink/10 bg-white p-6 shadow-card sm:p-8 md:p-10">
+              <a href="#" className="mb-6 inline-flex items-center font-semibold underline underline-offset-4">{t('privacyPage.backHome')}</a>
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-brand-600">{t('privacyPage.title')}</p>
+              <h1 className="h2 !mt-3 !mb-4">{t('privacyPage.title')}</h1>
+
+              <p className="mt-5 text-lg text-ink/75"><strong>Privacy:</strong> the enquiry form collects only your name, contact number and optional message. It does not store or send anything itself; your message is passed to WhatsApp and reaches the centre only when you send it. The location map is provided by Google, and Google&apos;s privacy policy applies to it.</p>
+
+              <div className="mt-8 space-y-6 text-ink/80">
+                <div className="rounded-2xl bg-stone-50 p-5">
+                  <h2 className="text-lg font-extrabold text-ink">{t('privacyPage.item1Title')}</h2>
+                  <p className="mt-2">{t('privacyPage.item1')}</p>
+                </div>
+
+                <div className="rounded-2xl bg-stone-50 p-5">
+                  <h2 className="text-lg font-extrabold text-ink">{t('privacyPage.item2Title')}</h2>
+                  <p className="mt-2">{t('privacyPage.item2')}</p>
+                </div>
+
+                <div className="rounded-2xl bg-stone-50 p-5">
+                  <h2 className="text-lg font-extrabold text-ink">{t('privacyPage.item3Title')}</h2>
+                  <p className="mt-2">{t('privacyPage.item3')}</p>
+                </div>
+
+                <div className="rounded-2xl bg-stone-50 p-5">
+                  <h2 className="text-lg font-extrabold text-ink">{t('privacyPage.item4Title')}</h2>
+                  <p className="mt-2">{t('privacyPage.item4')}</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        <Footer />
+        <MobileBar />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd() }} />
+      </>
+    )
+  }
+
   return (
     <>
       <Header />
