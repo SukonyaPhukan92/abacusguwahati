@@ -21,7 +21,8 @@ export const centre = {
   geo: { lat: 26.1178433, lng: 91.7484423 }, // from the supplied Maps link
   phone: '+918638669857', // listed as 086386 69857
   phoneDisplay: '086386 69857',
-  googleRating: { value: 4.9, count: 104, asOf: '29 Sep 2026' }, // shown with attribution; not used in structured data
+  googleRating: { value: 4.9, count: 104 }, // not used in structured data
+    googleRating: { value: 4.9, count: 104 }, // not used in structured data
 
   // ---- Still unverified ----
   // WhatsApp enquiries go to the centre's listed mobile (086386 69857), as requested by the site owner.

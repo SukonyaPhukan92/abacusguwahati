@@ -21,7 +21,6 @@ export default function Hero() {
             <p className="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold shadow-card">
               <span aria-hidden="true" className="text-amber-500">★</span>
               {centre.googleRating.value} on Google Maps · {centre.googleRating.count} reviews
-              <span className="font-normal text-ink/60">(as of {centre.googleRating.asOf})</span>
             </p>
           )}
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">

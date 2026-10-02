@@ -11,7 +11,7 @@ export function Feedback() {
         <p className="mt-3 text-ink/70">
           Rated <strong className="text-ink">{centre.googleRating.value} out of 5</strong> from {centre.googleRating.count} reviews on{' '}
           <a className="font-semibold underline" href={centre.mapsUrl} target="_blank" rel="noopener noreferrer">Google Maps<span className="sr-only"> (opens in a new tab)</span></a>{' '}
-          (as of {centre.googleRating.asOf}). Selected reviews are quoted below as written.
+           Selected reviews are quoted below as written.
         </p>
       )}
       <ul className="mt-8 grid gap-6 md:grid-cols-3">
