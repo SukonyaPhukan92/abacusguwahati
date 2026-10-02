@@ -1,5 +1,6 @@
 import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
+import AbacusPractice from './components/AbacusPractice.jsx'
 import { About, Programmes, Benefits, GetStarted } from './components/Sections.jsx'
 import Gallery from './components/Gallery.jsx'
 import { Faqs, Feedback } from './components/Faqs.jsx'
@@ -39,6 +40,7 @@ export default function App() {
       <main id="main">
         <Hero />
         <About />
+        <AbacusPractice />
         <Programmes />
         <Benefits />
         <GetStarted />
