@@ -9,7 +9,15 @@ export default function Contact() {
   const [errors, setErrors] = useState({})
   const [result, setResult] = useState(null)
   const refs = { name: useRef(), phone: useRef(), message: useRef() }
-  const set = (k) => (e) => setVals({ ...vals, [k]: e.target.value })
+  const set = (key) => (event) => {
+    setVals((current) => ({ ...current, [key]: event.target.value }))
+    setErrors((current) => {
+      const next = { ...current }
+      delete next[key]
+      return next
+    })
+    setResult(null)
+  }
   const mapUrl = centre.mapEmbedUrl ? new URL(centre.mapEmbedUrl) : null
   if (mapUrl) mapUrl.searchParams.set('hl', language)
 
@@ -21,20 +29,34 @@ export default function Contact() {
     if (first) { refs[first].current?.focus(); setResult(null); return }
     const text = buildMessage(vals, t)
     if (waBase) {
-      window.open(`${waBase}?text=${encodeURIComponent(text)}`, '_blank', 'noopener')
-      setResult({ kind: 'info', text: t('contact.whatsappReady') })
+      try {
+        const popup = window.open(`${waBase}?text=${encodeURIComponent(text)}`, '_blank')
+        if (!popup) throw new Error('Popup blocked')
+        popup.opener = null
+        setResult({ kind: 'success', text: t('contact.whatsappReady'), message: text })
+      } catch {
+        setResult({ kind: 'error', text: t('contact.whatsappBlocked'), message: text })
+      }
     } else if (centre.email) {
       window.location.href = `mailto:${centre.email}?subject=${encodeURIComponent(t('contact.emailSubject'))}&body=${encodeURIComponent(text)}`
-      setResult({ kind: 'info', text: t('contact.emailReady') })
+      setResult({ kind: 'success', text: t('contact.emailReady'), message: text })
     } else {
       setResult({ kind: 'pending', text })
     }
   }
 
-  const copy = () => navigator.clipboard?.writeText(result.text)
+  const copy = async () => {
+    const message = result?.message ?? result?.text
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable')
+      await navigator.clipboard.writeText(message)
+      setResult({ kind: 'success', text: t('contact.messageCopied'), message })
+    } catch {
+      setResult({ kind: 'error', text: t('contact.copyFailed'), message })
+    }
+  }
 
-  const tbc = <span className="rounded bg-amber-100 px-2 py-0.5 text-sm font-semibold text-amber-900">{t('common.toConfirm')}</span>
-  const err = (k) => errors[k] && <p id={`${k}-err`} className="mt-1 text-sm font-semibold text-red-700">{errors[k]}</p>
+  const err = (key) => errors[key] && <p id={`${key}-err`} role="alert" className="mt-1 text-sm font-semibold text-red-700">{errors[key]}</p>
   const a11y = (k) => ({ 'aria-invalid': !!errors[k], 'aria-describedby': errors[k] ? `${k}-err` : undefined })
 
   return (
@@ -45,9 +67,9 @@ export default function Contact() {
         <div className="card flex flex-col gap-5">
           <h3 className="text-xl font-extrabold">{centre.name}</h3>
           <dl className="space-y-4">
-            <div><dt className="font-bold">{t('contact.address')}</dt><dd>{centre.streetAddress ? <>{centre.streetAddress}, {centre.addressLocality}, {centre.city}, {centre.region}{centre.postalCode ? ' ' + centre.postalCode : ''}{centre.plusCode && <span className="block text-sm text-ink/60">{t('contact.plusCode')} {centre.plusCode}</span>}</> : <>{tbc} <span className="text-ink/70">{t('contact.seeMaps')}</span></>}</dd></div>
-            <div><dt className="font-bold">{t('contact.phone')}</dt><dd>{telHref ? <a className="font-semibold underline" href={telHref}>{centre.phoneDisplay}</a> : tbc}</dd></div>
-            <div><dt className="font-bold">{t('contact.hours')}</dt><dd>{centre.hours ? centre.hours.map((h) => <div key={h}>{h}</div>) : tbc}</dd></div>
+            {centre.streetAddress && <div><dt className="font-bold">{t('contact.address')}</dt><dd>{centre.streetAddress}, {centre.addressLocality}, {centre.city}, {centre.region}{centre.postalCode ? ' ' + centre.postalCode : ''}{centre.plusCode && <span className="block text-sm text-ink/60">{t('contact.plusCode')} {centre.plusCode}</span>}</dd></div>}
+            {telHref && <div><dt className="font-bold">{t('contact.phone')}</dt><dd><a className="font-semibold underline" href={telHref}>{centre.phoneDisplay || centre.phone}</a></dd></div>}
+            {centre.hours?.length > 0 && <div><dt className="font-bold">{t('contact.hours')}</dt><dd>{centre.hours.map((hour) => <div key={hour}>{hour}</div>)}</dd></div>}
           </dl>
           <div className="flex flex-wrap gap-3">
             {telHref && <a href={telHref} className="btn btn-primary">{t('contact.callCentre')}</a>}
@@ -95,13 +117,14 @@ export default function Contact() {
             {t('contact.privacyForm')}
             {waBase ? t('contact.whatsappNote') : ''}
           </p>
-          <div aria-live="polite">
-            {result?.kind === 'info' && <p className="rounded-2xl bg-brand-50 p-4 border-2 border-brand-200 font-semibold">{result.text}</p>}
-            {result?.kind === 'pending' && (
+          <div aria-live="polite" aria-atomic="true">
+            {result?.kind === 'success' && <p role="status" className="rounded-2xl border-2 border-brand-200 bg-brand-50 p-4 font-semibold">{result.text}</p>}
+            {result?.kind === 'error' && <p role="alert" className="rounded-2xl border-2 border-red-200 bg-red-50 p-4 font-semibold text-red-900">{result.text}</p>}
+            {(result?.kind === 'pending' || (result?.kind === 'error' && result.message)) && (
               <div className="rounded-2xl bg-amber-50 p-4">
-                <p className="font-bold text-amber-900">{t('contact.nothingSent')}</p>
-                <p className="mt-1 text-sm">{t('contact.emailNotConnected')}{telHref ? <>{t('contact.callOn')} <a className="font-semibold underline" href={telHref}>{centre.phoneDisplay}</a>, </> : ''}{t('contact.copyBelow')}</p>
-                <pre className="mt-3 whitespace-pre-wrap rounded-xl bg-white p-3 text-sm">{result.text}</pre>
+                {result.kind === 'pending' && <p className="font-bold text-amber-900">{t('contact.nothingSent')}</p>}
+                <p className="mt-1 text-sm">{result.kind === 'pending' ? <>{t('contact.emailNotConnected')}{telHref ? <>{t('contact.callOn')} <a className="font-semibold underline" href={telHref}>{centre.phoneDisplay || centre.phone}</a>, </> : ''}</> : null}{t('contact.copyBelow')}</p>
+                <pre className="mt-3 whitespace-pre-wrap rounded-xl bg-white p-3 text-sm">{result.message ?? result.text}</pre>
                 <button type="button" onClick={copy} className="btn btn-secondary mt-3 !py-2">{t('contact.copyMessage')}</button>
               </div>
             )}

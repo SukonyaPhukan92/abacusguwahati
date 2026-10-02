@@ -20,7 +20,6 @@ const messages = {
       enquireDemo: 'Enquire about a demo',
       whatsappNewTab: ' on WhatsApp (opens in a new tab)',
       opensNewTab: ' (opens in a new tab)',
-      toConfirm: 'To be confirmed',
       seeMaps: 'See us on the map',
       logoAlt: 'SIP Abacus — success assured',
       mainNavigation: 'Main',
@@ -111,7 +110,7 @@ const messages = {
     gallery: {
       eyebrow: 'Gallery',
       heading: 'Life at SIP Abacus',
-      intro: 'Snapshots from the Lakhra centre, along with SIP Abacus competitions and events across Assam. Click on any photo to enlarge it.',
+      intro: 'Snapshots from the Lakhra centre, along with SIP Abacus competitions and events across Assam.',
       centre: 'At the centre',
       events: 'Competitions & events in Assam',
       viewer: 'Photo viewer: {caption}',
@@ -144,6 +143,14 @@ const messages = {
       team: 'Event volunteer team',
       awardsAlt: 'Teachers holding certificates on stage at the SIP Assam Annual Awards 2022',
       awards: 'SIP Assam Annual Awards 2022 (14th Annual Meet, Feb 2023)',
+      mixedUniformsAlt: 'Students in red, blue and green uniforms writing at classroom desks, with a teacher standing at the left',
+      mixedUniforms: 'Classwork in a mixed-uniform classroom',
+      whiteUniformsAlt: 'Children in white uniforms writing in notebooks at rows of classroom desks',
+      whiteUniforms: 'A classroom full of focused learners',
+      observingClassAlt: 'A teacher seated in the foreground observes students working at classroom desks',
+      observingClass: 'A teacher observing classwork',
+      guidedLearningAlt: 'A teacher bends over a student’s desk while children complete written work',
+      guidedLearning: 'Teacher support during classwork',
     },
     feedback: {
       eyebrow: 'Parent feedback',
@@ -179,7 +186,6 @@ const messages = {
       phone: 'Phone',
       hours: 'Opening hours',
       plusCode: 'Plus Code:',
-      seeMaps: '— see the Google Maps listing below',
       callCentre: 'Call the centre',
       mapTitle: 'Google Map showing the location of SIP Abacus, Lakhra',
       openMaps: 'Open in Google Maps',
@@ -193,8 +199,11 @@ const messages = {
       prepareEnquiry: 'Prepare my enquiry',
       privacyForm: 'We only ask for your name, phone number, and an optional message. Please do not share your child’s personal details.',
       whatsappNote: ' Your details are passed to WhatsApp, and nothing is sent until you press Send.',
-      whatsappReady: 'WhatsApp should now be open with your message ready. Please press Send there — your enquiry has not been sent until you do.',
+      whatsappReady: 'WhatsApp is open with your message ready. It will reach the centre only after you press Send.',
+      whatsappBlocked: 'Your browser blocked the WhatsApp window. Your enquiry has not been sent.',
       emailReady: 'Your email app should now open with the message ready. Please press Send there — your enquiry has not been sent until you do.',
+      messageCopied: 'Message copied. Paste it into WhatsApp and press Send.',
+      copyFailed: 'Could not copy automatically. Copy the message below manually.',
       prefillGreeting: 'Hello SIP Abacus, I would like to enquire about a demo class for my child.',
       messageGreeting: 'Hello SIP Abacus, I would like to enquire about a demo.',
       messageParent: 'Parent/guardian: {name}',
@@ -216,27 +225,24 @@ const messages = {
       aria: 'Footer',
       independent: 'Independent page for the Lakhra centre of the SIP Abacus programme.',
       viewMaps: 'View on Google Maps',
-      privacy: 'Privacy:',
-      privacyRest: 'the enquiry form only collects your name, contact number, and optional message. It does not store or send anything by itself; your message is passed to',
-      copyOnly: 'you to copy',
       whatsapp: 'WhatsApp',
-      emailApp: 'your email app',
-      sendNote: 'and reaches the centre only when you send it. The location map is provided by Google, and Google\'s privacy policy applies to it.',
       privacyLink: 'Privacy policy',
       copyright: '© {year} SIP Abacus Lakhra. All rights reserved.',
     },
     privacyPage: {
       backHome: 'Back to home',
       title: 'Privacy policy',
-      intro: 'We keep the enquiry process simple and transparent so families can contact the centre with confidence.',
-      item1Title: 'What we ask for:',
-      item1: 'The enquiry form only asks for your name, contact number, and an optional message.',
-      item2Title: 'What we do not do:',
-      item2: 'The website does not store or send your information by itself.',
-      item3Title: 'When your message is sent:',
-      item3: 'When you choose WhatsApp or email, your message opens in your app and is only sent when you press Send.',
-      item4Title: 'Map and third-party services:',
-      item4: 'The location map is provided by Google, and Google’s privacy policy applies to that map service.',
+      metaTitle: 'Privacy policy | SIP Abacus Lakhra, Guwahati',
+      metaDescription: 'Read how the SIP Abacus Lakhra website handles enquiry details, WhatsApp messages and the Google Maps service.',
+      intro: 'This notice explains what information you enter in the enquiry form, how your enquiry is sent, and how third-party services on this website are handled.',
+      item1Title: 'Information you provide',
+      item1: 'The enquiry form asks for your name, contact number and, if you choose, a message.',
+      item2Title: 'How your enquiry is sent',
+      item2: 'Submitting the form opens WhatsApp with your message prepared. This website does not send the enquiry to the centre. It is sent only if you choose Send in WhatsApp.',
+      item3Title: 'Storage and third-party apps',
+      item3: 'The website does not store enquiry details on its own server. Your details remain in the form while you use the page and are included in the prepared message. WhatsApp handles information according to its own privacy practices.',
+      item4Title: 'Location map',
+      item4: 'The location map is provided by Google. Google’s privacy policy applies when you view or interact with the map.',
     },
     mobile: { aria: 'Quick actions', call: 'Call', enquire: 'Enquire', map: 'Map' },
   },
@@ -250,7 +256,8 @@ const messages = {
     common: {
       skip: 'মূল বিষয়লৈ যাওক', about: 'আমাৰ বিষয়ে', programmes: 'কাৰ্যসূচী', benefits: 'শিকাৰ সুবিধা', gallery: 'ফটোসমূহ', faqs: 'সঘনাই সোধা প্ৰশ্ন', contact: 'যোগাযোগ',
       enquire: 'সোধক', enquireDemo: 'ডেমোৰ বাবে সোধক', whatsappNewTab: ' WhatsApp-ত (নতুন টেবত খোল খাব)', opensNewTab: ' (নতুন টেবত খোল খাব)',
-      toConfirm: 'নিশ্চিত কৰিব লাগিব', seeMaps: 'মেপত আমাক চাওক', logoAlt: 'SIP Abacus – সফলতা নিশ্চিত',
+      seeMaps: 'মেপত আমাক চাওক',
+      logoAlt: 'SIP Abacus – সফলতা নিশ্চিত',
       mainNavigation: 'মূল নেভিগেশ্যন', mobileNavigation: 'ম’বাইল নেভিগেশ্যন', menuOpen: 'মেনু খোলক', menuClose: 'মেনু বন্ধ কৰক',
     },
     hero: {
@@ -297,7 +304,7 @@ const messages = {
       visit: 'ভ্ৰমণ বা ডেমোৰ ব্যৱস্থা কৰক', visitDescription: 'কেন্দ্ৰৰ উপলব্ধতাৰ ওপৰত নিৰ্ভৰশীল।',
     },
     gallery: {
-      eyebrow: 'ফটোসমূহ', heading: 'SIP Abacus-ৰ জীৱন', intro: 'লখৰা কেন্দ্ৰৰ শ্ৰেণীকোঠাৰ মুহূৰ্ত আৰু অসমত হোৱা SIP Abacus প্ৰতিযোগিতা আৰু অনুষ্ঠানসমূহ। ডাঙৰকৈ চাবলৈ ফটো বাছনি কৰক।',
+      eyebrow: 'ফটোসমূহ', heading: 'SIP Abacus-ৰ জীৱন', intro: 'লখৰা কেন্দ্ৰৰ শ্ৰেণীকোঠাৰ মুহূৰ্ত আৰু অসমত হোৱা SIP Abacus প্ৰতিযোগিতা আৰু অনুষ্ঠানসমূহ।',
       centre: 'কেন্দ্ৰত', events: 'অসমৰ প্ৰতিযোগিতা আৰু অনুষ্ঠান', viewer: 'ফটো দৰ্শক: {caption}', photoCount: '{current} / {total}',
       previous: 'আগৰ', next: 'পিছৰ', close: 'বন্ধ কৰক', enlarge: ' – ডাঙৰকৈ ফটো খোলক',
       classCardsAlt: 'কমলা SIP টি-চাৰ্ট পিন্ধা হাঁহিমুখীয়া শিশুৱে শ্ৰেণীত কাৰ্ড দেখুৱাইছে; সন্মুখত এবাকাছ আছে', classCards: 'শ্ৰেণীৰ গৌৰৱৰ মুহূৰ্ত',
@@ -312,6 +319,10 @@ const messages = {
       volunteersAlt: 'অসমত ২০২৪ চনৰ Regional SIP Abacus Competition-ত নীলা SIP টি-চাৰ্ট পিন্ধা স্বেচ্ছাসেৱকসকল', volunteers: 'আঞ্চলিক প্ৰতিযোগিতাৰ স্বেচ্ছাসেৱক, ২০২৪',
       teamAlt: 'অনুষ্ঠানস্থলীত একেলগে থিয় হৈ থকা নীলা SIP টি-চাৰ্ট পিন্ধা স্বেচ্ছাসেৱকৰ দল', team: 'অনুষ্ঠানৰ স্বেচ্ছাসেৱকৰ দল',
       awardsAlt: 'মঞ্চত প্ৰমাণপত্ৰ লৈ থকা শিক্ষকসকল, SIP Assam Annual Awards 2022', awards: 'SIP Assam Annual Awards 2022 (১৪তম বাৰ্ষিক মিলন, ফেব্ৰুৱাৰী ২০২৩)',
+      mixedUniformsAlt: 'ৰঙা, নীলা আৰু সেউজীয়া ইউনিফৰ্ম পিন্ধা শিক্ষাৰ্থীসকলে শ্ৰেণীকোঠাৰ ডেস্কত লিখি আছে; বাওঁফালে এগৰাকী শিক্ষয়িত্ৰী থিয় হৈ আছে', mixedUniforms: 'বিভিন্ন ৰঙৰ ইউনিফৰ্মত শ্ৰেণীকোঠাৰ অনুশীলন',
+      whiteUniformsAlt: 'বগা ইউনিফৰ্ম পিন্ধা শিশুসকলে শ্ৰেণীকোঠাৰ ডেস্কত বহি বহীত লিখি আছে', whiteUniforms: 'মনোযোগেৰে শিকা শিক্ষাৰ্থীৰ শ্ৰেণীকোঠা',
+      observingClassAlt: 'সন্মুখত বহি থকা এগৰাকী শিক্ষয়িত্ৰীয়ে ডেস্কত কাম কৰি থকা শিক্ষাৰ্থীসকলক লক্ষ্য কৰিছে', observingClass: 'শ্ৰেণীকোঠাৰ কাম লক্ষ্য কৰি থকা শিক্ষয়িত্ৰী',
+      guidedLearningAlt: 'শিশুসকলে লিখিত কাম কৰি থকাৰ সময়ত এগৰাকী শিক্ষয়িত্ৰীয়ে এজন শিক্ষাৰ্থীৰ ডেস্কত সহায় কৰিছে', guidedLearning: 'শ্ৰেণীৰ কামত শিক্ষয়িত্ৰীৰ সহায়',
     },
     feedback: {
       eyebrow: 'অভিভাৱকৰ মতামত', heading: 'Google-ত অভিভাৱকসকলে কি কয়', rated: '{rating}/৫ ৰেটিং, {count}টা পৰ্যালোচনাৰ ভিত্তিত', note: 'নিৰ্বাচিত পৰ্যালোচনাসমূহৰ অসমীয়া অনুবাদ তলত দিয়া হৈছে।', source: 'Google-ৰ পৰ্যালোচনা', translatedSource: 'Google-ৰ পৰ্যালোচনাৰ অসমীয়া অনুবাদ',
@@ -330,14 +341,17 @@ const messages = {
     },
     contact: {
       eyebrow: 'যোগাযোগ আৰু সোধা-পোছা', heading: 'লখৰা কেন্দ্ৰৰ সৈতে কথা পাতক', address: 'ঠিকনা', phone: 'ফোন', hours: 'খোলাৰ সময়',
-      plusCode: 'Plus Code:', seeMaps: '— তলৰ Google Maps তালিকাখন চাওক', callCentre: 'কেন্দ্ৰলৈ ফোন কৰক',
+      plusCode: 'Plus Code:', callCentre: 'কেন্দ্ৰলৈ ফোন কৰক',
       mapTitle: 'SIP Abacus, লখৰাৰ অৱস্থান দেখুওৱা Google Map', openMaps: 'Google Maps-ত খোলক',
       formTitle: 'ডেমোৰ বিষয়ে সোধক', parentName: 'অভিভাৱকৰ নাম', contactNumber: 'যোগাযোগ নম্বৰ', message: 'বাৰ্তা', optional: '(ঐচ্ছিক)',
       continueWhatsApp: 'WhatsApp-ত আগবাঢ়ক', continueEmail: 'ইমেইলত আগবাঢ়ক', prepareEnquiry: 'সোধা-পোছা প্ৰস্তুত কৰক',
       privacyForm: 'আমি কেৱল আপোনাৰ নাম, নম্বৰ আৰু ঐচ্ছিক বাৰ্তাটো বিচাৰোঁ। অনুগ্ৰহ কৰি শিশুৰ ব্যক্তিগত তথ্য নিদিব।',
       whatsappNote: ' আপোনাৰ তথ্য WhatsApp-লৈ যাব; আপুনি Send টিপাৰ আগলৈকে একো পঠিওৱা নহয়।',
-      whatsappReady: 'আপোনাৰ বাৰ্তাটো প্ৰস্তুত হৈ WhatsApp খোল খাব লাগে। তাত Send টিপক — তাৰ আগলৈকে সোধা-পোছা পঠিওৱা নহয়।',
+      whatsappReady: 'WhatsApp-ত আপোনাৰ বাৰ্তাটো প্ৰস্তুত হৈছে। আপুনি Send টিপিলেহে কেন্দ্ৰই বাৰ্তাটো লাভ কৰিব।',
+      whatsappBlocked: 'আপোনাৰ ব্ৰাউজাৰে WhatsApp খোলাত বাধা দিলে। সোধা-পোছাটো পঠিওৱা হোৱা নাই।',
       emailReady: 'আপোনাৰ বাৰ্তাটো প্ৰস্তুত হৈ ইমেইল এপ খোল খাব লাগে। তাত Send টিপক — তাৰ আগলৈকে সোধা-পোছা পঠিওৱা নহয়।',
+      messageCopied: 'বাৰ্তাটো কপি কৰা হৈছে। WhatsApp-ত পেষ্ট কৰি Send টিপক।',
+      copyFailed: 'বাৰ্তাটো স্বয়ংক্ৰিয়ভাৱে কপি কৰিব পৰা নগ’ল। তলৰ বাৰ্তাটো নিজে কপি কৰক।',
       prefillGreeting: 'নমস্কাৰ SIP Abacus, মোৰ শিশুৰ বাবে ডেমো ক্লাছৰ বিষয়ে সুধিব বিচাৰোঁ।', messageGreeting: 'নমস্কাৰ SIP Abacus, ডেমোৰ বিষয়ে সুধিব বিচাৰোঁ।',
       messageParent: 'অভিভাৱক: {name}', messagePhone: 'যোগাযোগ নম্বৰ: {phone}', messageBody: 'বাৰ্তা: {message}', emailSubject: 'ডেমোৰ বিষয়ে সোধা-পোছা',
       nothingSent: 'এতিয়ালৈকে একো পঠিওৱা হোৱা নাই।', emailNotConnected: 'অনলাইন সোধা-পোছা এতিয়াও কেন্দ্ৰৰ সৈতে সংযুক্ত নহয়। অনুগ্ৰহ কৰি ',
@@ -348,23 +362,24 @@ const messages = {
     },
     footer: {
       aria: 'ফুটাৰ', independent: 'SIP Abacus কাৰ্যসূচীৰ লখৰা কেন্দ্ৰৰ স্বতন্ত্ৰ পৃষ্ঠা।', viewMaps: 'Google Maps-ত চাওক',
-      privacy: 'গোপনীয়তা:', privacyRest: 'সোধা-পোছাৰ ফৰ্মে কেৱল আপোনাৰ নাম, যোগাযোগ নম্বৰ আৰু ঐচ্ছিক বাৰ্তা সংগ্ৰহ কৰে। ই নিজে একো সংৰক্ষণ বা পঠিয়াই নাথাকে; আপোনাৰ বাৰ্তা যায়',
-      copyOnly: 'আপুনি কপি কৰিবলৈ', whatsapp: 'WhatsApp', emailApp: 'আপোনাৰ ইমেইল এপ', sendNote: 'আৰু আপুনি পঠিয়ালেহে কেন্দ্ৰই লাভ কৰে। অৱস্থানৰ মেপ Google-ৰ; ইয়াৰ বাবে Google-ৰ গোপনীয়তা নীতি প্ৰযোজ্য।',
+      whatsapp: 'WhatsApp',
       privacyLink: 'গোপনীয়তা নীতি',
       copyright: '© {year} SIP Abacus লখৰা। সর্বস্বত্ব সংৰক্ষিত।',
     },
     privacyPage: {
       backHome: 'ঘৰলৈ যাওক',
       title: 'গোপনীয়তা নীতি',
-      intro: 'আমিহে সহজ আৰু স্বচ্ছ উপায়ে অভিভাৱকসকলৰ সৈতে যোগাযোগ কৰিবলৈ চেষ্টা কৰোঁ, যাতে সুধা-পোছা সহজে আৰু নিশ্চিন্তে হয়।',
-      item1Title: 'আমি কি বিচাৰি: ',
-      item1: 'সোধা-পোছাৰ ফৰ্মত কেৱল আপোনাৰ নাম, যোগাযোগ নম্বৰ আৰু ঐচ্ছিক বাৰ্তা চাওক।',
-      item2Title: 'আমি কি নকৰো: ',
-      item2: 'ৱেবছাইট নিজে আপোনাৰ তথ্য সংৰক্ষণ বা পঠিয়ায় নাহে।',
-      item3Title: 'আপোনাৰ বাৰ্তা কেতিয়াহে পঠিওৱা হয়: ',
-      item3: 'আপুনি WhatsApp বা ইমেইল বাছিলে, বাৰ্তাটো আপোনাৰ এপত খোল খাব আৰু আপুনি Send টিপালেহে পঠিওৱা হয়।',
-      item4Title: 'মেপ আৰু তৃতীয় পক্ষৰ সেৱা: ',
-      item4: 'অবস্থানৰ মেপ Google-ৰ দ্বাৰা দিয়া হয়, আৰু ইয়াৰ বাবে Google-ৰ গোপনীয়তা নীতি প্ৰযোজ্য।',
+      metaTitle: 'গোপনীয়তা নীতি | SIP Abacus লখৰা, গুৱাহাটী',
+      metaDescription: 'SIP Abacus লখৰাৰ ৱেবছাইটে সোধা-পোছাৰ তথ্য, WhatsApp বাৰ্তা আৰু Google Maps সেৱা কেনেদৰে ব্যৱহাৰ কৰে জানক।',
+      intro: 'এই জাননীত সোধা-পোছাৰ ফৰ্মত দিয়া তথ্য, সোধা-পোছা পঠিওৱাৰ প্ৰক্ৰিয়া আৰু এই ৱেবছাইটৰ তৃতীয় পক্ষৰ সেৱাৰ বিষয়ে ব্যাখ্যা কৰা হৈছে।',
+      item1Title: 'আপুনি দিয়া তথ্য',
+      item1: 'সোধা-পোছাৰ ফৰ্মত আপোনাৰ নাম, যোগাযোগ নম্বৰ আৰু ইচ্ছা কৰিলে এটা বাৰ্তা বিচৰা হয়।',
+      item2Title: 'সোধা-পোছা কেনেদৰে পঠিওৱা হয়',
+      item2: 'ফৰ্ম জমা দিলে আপোনাৰ বাৰ্তাসহ WhatsApp খোল খায়। এই ৱেবছাইটে কেন্দ্ৰলৈ সোধা-পোছা পঠিয়াই নিদিয়ে। আপুনি WhatsApp-ত Send বাছিলেহে বাৰ্তাটো পঠিওৱা হয়।',
+      item3Title: 'তথ্য সংৰক্ষণ আৰু তৃতীয় পক্ষৰ এপ',
+      item3: 'এই ৱেবছাইটে সোধা-পোছাৰ তথ্য নিজৰ ছাৰ্ভাৰত সংৰক্ষণ নকৰে। আপুনি পৃষ্ঠাটো ব্যৱহাৰ কৰি থকাৰ সময়ত তথ্য ফৰ্মত থাকে আৰু প্ৰস্তুত কৰা বাৰ্তাত অন্তৰ্ভুক্ত হয়। WhatsApp-এ নিজৰ গোপনীয়তা নীতি অনুসৰি তথ্য ব্যৱহাৰ কৰে।',
+      item4Title: 'অৱস্থানৰ মেপ',
+      item4: 'অৱস্থানৰ মেপ Google-এ প্ৰদান কৰে। মেপটো চালে বা ব্যৱহাৰ কৰিলে Google-ৰ গোপনীয়তা নীতি প্ৰযোজ্য হয়।',
     },
     mobile: { aria: 'দ্ৰুত যোগাযোগ', call: 'ফোন', enquire: 'সোধক', map: 'মেপ' },
   },
@@ -384,14 +399,24 @@ export function LanguageProvider({ children }) {
   const [language, setLanguage] = useState(getSavedLanguage)
 
   useEffect(() => {
-    document.documentElement.lang = language
-    document.title = messages[language].page.title
-    document.querySelector('meta[name="description"]')?.setAttribute('content', messages[language].page.description)
+    const updateMetadata = () => {
+      const page = window.location.hash === '#privacy' ? messages[language].privacyPage : messages[language].page
+      const title = page.metaTitle ?? page.title
+      const description = page.metaDescription ?? page.description
+      document.documentElement.lang = language
+      document.title = title
+      document.querySelector('meta[name="description"]')?.setAttribute('content', description)
+      document.querySelector('meta[property="og:title"]')?.setAttribute('content', title)
+      document.querySelector('meta[property="og:description"]')?.setAttribute('content', description)
+    }
+    updateMetadata()
+    window.addEventListener('hashchange', updateMetadata)
     try {
       localStorage.setItem('abacus-language', language)
     } catch {
       // The selected language still works for this visit when storage is unavailable.
     }
+    return () => window.removeEventListener('hashchange', updateMetadata)
   }, [language])
 
   function t(key, values = {}) {

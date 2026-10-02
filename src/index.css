@@ -86,8 +86,8 @@
   .practice-footer { align-items: stretch; flex-direction: column; gap: .8rem; margin-top: 1.4rem; }
   .practice-total { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
   .practice-total output { margin-top: 0; }
-  .practice-actions { display: grid; grid-template-columns: 1fr 1fr; justify-content: stretch; gap: .5rem; }
-  .practice-button { padding: .6rem .65rem; font-size: .85rem; }
+  .practice-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); justify-content: stretch; gap: .5rem; }
+  .practice-button { min-width: 0; padding: .6rem .65rem; font-size: .85rem; white-space: normal; }
   .practice-check { grid-column: 1 / -1; }
   .practice-feedback { margin-top: .65rem; font-size: .9rem; }
 }

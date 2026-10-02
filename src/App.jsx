@@ -54,11 +54,11 @@ export default function App() {
         <main id="main" className="bg-stone-50">
           <section className="section reveal mx-auto max-w-4xl py-12">
             <div className="rounded-[2rem] border border-ink/10 bg-white p-6 shadow-card sm:p-8 md:p-10">
-              <a href="#" className="mb-6 inline-flex items-center font-semibold underline underline-offset-4">{t('privacyPage.backHome')}</a>
+              <a href="/" className="mb-6 inline-flex items-center font-semibold underline underline-offset-4">{t('privacyPage.backHome')}</a>
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-brand-600">{t('privacyPage.title')}</p>
               <h1 className="h2 !mt-3 !mb-4">{t('privacyPage.title')}</h1>
 
-              <p className="mt-5 text-lg text-ink/75"><strong>Privacy:</strong> the enquiry form collects only your name, contact number and optional message. It does not store or send anything itself; your message is passed to WhatsApp and reaches the centre only when you send it. The location map is provided by Google, and Google&apos;s privacy policy applies to it.</p>
+              <p className="mt-5 text-lg text-ink/75">{t('privacyPage.intro')}</p>
 
               <div className="mt-8 space-y-6 text-ink/80">
                 <div className="rounded-2xl bg-stone-50 p-5">
