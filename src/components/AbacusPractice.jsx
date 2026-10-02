@@ -1,11 +1,11 @@
 import { useState } from 'react'
 
 const places = [
-  { label: 'Ten thousands', short: '10,000', value: 10000 },
-  { label: 'Thousands', short: '1,000', value: 1000 },
-  { label: 'Hundreds', short: '100', value: 100 },
-  { label: 'Tens', short: '10', value: 10 },
-  { label: 'Ones', short: '1', value: 1 },
+  { label: 'Ten thousands', compact: '10k', short: '10,000', value: 10000 },
+  { label: 'Thousands', compact: '1k', short: '1,000', value: 1000 },
+  { label: 'Hundreds', compact: '100', short: '100', value: 100 },
+  { label: 'Tens', compact: '10', short: '10', value: 10 },
+  { label: 'Ones', compact: '1', short: '1', value: 1 },
 ]
 
 function makeChallenge() {
@@ -82,7 +82,10 @@ export default function AbacusPractice() {
             const upperActive = digit >= 5
             return (
               <div className="practice-rod" key={place.value}>
-                <span className="practice-place" aria-label={place.label}>{place.label}</span>
+                <span className="practice-place" aria-label={place.label}>
+                  <span className="practice-place-full" aria-hidden="true">{place.label}</span>
+                  <span className="practice-place-compact" aria-hidden="true">{place.compact}</span>
+                </span>
                 <span className="practice-place-value">{place.short}</span>
                 <div className="practice-upper">
                   <button

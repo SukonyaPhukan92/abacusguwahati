@@ -38,6 +38,7 @@
 .practice-rod:nth-child(even) { background: linear-gradient(90deg, #f5dfbf, #fff6e9 48%, #edd2aa); }
 .practice-rod + .practice-rod { border-left: 2px solid rgba(99,58,37,.25); }
 .practice-place { color: #31584c; font-size: .72rem; font-weight: 900; text-align: center; }
+.practice-place-compact { display: none; }
 .practice-place-value { margin-top: .05rem; color: #82573a; font-size: .7rem; font-weight: 800; }
 .practice-upper { display: flex; height: 4rem; align-items: flex-start; justify-content: center; padding-top: .6rem; }
 .practice-beam { z-index: 1; width: calc(100% + .5rem); height: 11px; flex: 0 0 11px; border-block: 1px solid #633922; background: linear-gradient(180deg, #bf7543, #99532f); box-shadow: 0 2px 3px rgba(63,34,21,.22); }
@@ -70,8 +71,8 @@
   .practice-hint-title { width: 100%; }
   .practice-board { margin-top: .9rem; border-width: 5px; border-radius: 11px; }
   .practice-rod { padding-inline: .1rem; }
-  .practice-place { font-size: .62rem; }
-  .practice-place-value { font-size: .65rem; }
+  .practice-place-full, .practice-place-value { display: none; }
+  .practice-place-compact { display: block; font-size: .78rem; }
   .practice-upper { height: 3.3rem; padding-top: .45rem; }
   .practice-lower { min-height: 7.3rem; padding-top: .35rem; }
   .practice-bead { width: 1.7rem; height: 1.1rem; flex-basis: 1.1rem; }
