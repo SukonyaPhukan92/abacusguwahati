@@ -33,6 +33,11 @@ const messages = {
       headingBrand: 'SIP Abacus, Lakhra.',
       description: 'Give your child a strong foundation in numbers with abacus and mental arithmetic classes in Lakhra, Guwahati. Speak to the centre about the programmes, find the right fit for your child, and ask about a demo class.',
       rating: '{rating} on Google Maps · {count} reviews',
+      yearsNumber: '23',
+      yearsLabel: 'Years of transforming lives',
+      studentsNumber: '1.1M',
+      studentsLabel: 'Students trained',
+      nationalNote: 'SIP Abacus nationwide, the programme your child joins at Lakhra',
       heroAlt: 'Smiling children in orange SIP T-shirts holding up cards in class, with an abacus on the desk',
     },
     about: {
@@ -322,6 +327,11 @@ const messages = {
       headingStart: 'সংখ্যাৰ আনন্দ আৱিষ্কাৰ কৰক', headingBrand: 'SIP Abacus, লখৰা-ত।',
       description: 'গুৱাহাটীৰ লখৰাত শিশুৰ বাবে Abacus আৰু মানসিক গণিতৰ শ্ৰেণী। কাৰ্যসূচীসমূহৰ বিষয়ে জানিবলৈ, আপোনাৰ শিশুৰ বাবে উপযুক্ত শ্ৰেণী বাছিবলৈ আৰু ডেমো ক্লাছৰ বিষয়ে সুধিবলৈ কেন্দ্ৰৰ সৈতে কথা পাতক।',
       rating: 'Google Maps-ত {rating} · {count}টা পৰ্যালোচনা',
+      yearsNumber: '২৩',
+      yearsLabel: 'বছৰ ধৰি জীৱন ৰূপান্তৰৰ যাত্ৰা',
+      studentsNumber: '১১ লাখ',
+      studentsLabel: 'শিক্ষাৰ্থী প্ৰশিক্ষিত',
+      nationalNote: 'সমগ্ৰ SIP Abacus-ৰ পৰিসংখ্যা, যি কাৰ্যসূচীত আপোনাৰ শিশুৱে লখৰাত যোগ দিয়ে',
       heroAlt: 'কমলা ৰঙৰ SIP টি-চাৰ্ট পিন্ধা হাঁহিমুখীয়া শিশুৱে শ্ৰেণীত কাৰ্ড দেখুৱাইছে; সন্মুখত এটা এবাকাছ আছে',
     },
     about: {
