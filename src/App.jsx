@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
 import AbacusPractice from './components/AbacusPractice.jsx'
+import WhyUs from './components/WhyUs.jsx'
 import { About, GetStarted } from './components/Sections.jsx'
 import { Programmes } from './components/Programmes.jsx'
 import Gallery from './components/Gallery.jsx'
@@ -99,6 +100,7 @@ export default function App() {
       <main id="main">
         <Hero />
         <About />
+        <WhyUs />
         <AbacusPractice />
         <Programmes />
         <GetStarted />
