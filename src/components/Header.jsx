@@ -3,7 +3,7 @@ import { logo } from '../config.js'
 import { useLanguage } from '../i18n.jsx'
 import EnquireLink from './EnquireLink.jsx'
 
-const links = [['about', '#about'], ['programmes', '#programmes'], ['benefits', '#benefits'], ['gallery', '#gallery'], ['team', '#team'], ['faqs', '#faqs'], ['contact', '#contact']]
+const links = [['about', '#about'], ['programmes', '#programmes'], ['gallery', '#gallery'], ['team', '#team'], ['faqs', '#faqs'], ['contact', '#contact']]
 
 export default function Header() {
   const [open, setOpen] = useState(false)

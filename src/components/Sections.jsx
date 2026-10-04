@@ -27,6 +27,8 @@ export function About() {
   )
 }
 
+const benefits = ['concentration', 'memory', 'confidence', 'fluency']
+
 export function Programmes() {
   const { t } = useLanguage()
   const details = {
@@ -37,53 +39,54 @@ export function Programmes() {
   return (
     <section id="programmes" className="bg-white">
       <div className="section reveal">
-        <p className="eyebrow">{t('programmes.eyebrow')}</p>
-        <h2 className="h2">{t('programmes.heading')}</h2>
-        <p className="mt-3 max-w-2xl text-ink/70">{t('programmes.intro')}</p>
-        <ul className="mt-10 grid gap-6 md:grid-cols-3">
-          {programmes.map((p, i) => {
-            const [name, description, note] = details[p.id]
-            return (
-              <li key={p.id} className="card border-2 border-brand-100 transition hover:-translate-y-1">
-                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-100 text-2xl font-extrabold text-brand-600" aria-hidden="true">{i + 1}</span>
-                <h3 className="mt-4 text-xl font-extrabold">{t(`programmes.${name}`)}</h3>
-                <p className="mt-2 text-ink/75">{t(`programmes.${description}`)}</p>
-                {note && <p className="mt-4 rounded-2xl bg-emerald-50 px-3 py-2 text-sm font-semibold text-emerald-900">{t(`programmes.${note}`)}</p>}
-                {i === 0 && (
-                  <>
-                    <p className="mt-3 text-xs font-semibold text-ink/60 uppercase tracking-wider">{t('programmes.agesLevelsFees')}</p>
-                    <p className="mt-1 text-sm text-ink/75">{t('programmes.admissionDetails')}</p>
-                    <p className="mt-2 rounded-full bg-green-100 px-3 py-1 inline-block text-xs font-semibold text-green-900">{t('programmes.feesInfo')}</p>
-                  </>
-                )}
-                {i > 0 && (
-                  <p className="mt-3 inline-block rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-900">{t('programmes.availability')}</p>
-                )}
-              </li>
-            )
-          })}
-        </ul>
+        {/* Programmes Section */}
+        <div>
+          <p className="eyebrow">{t('programmes.eyebrow')}</p>
+          <h2 className="h2">{t('programmes.heading')}</h2>
+          <p className="mt-3 max-w-2xl text-ink/70">{t('programmes.intro')}</p>
+          <ul className="mt-10 grid gap-6 md:grid-cols-3">
+            {programmes.map((p, i) => {
+              const [name, description, note] = details[p.id]
+              return (
+                <li key={p.id} className="card border-2 border-brand-100 transition hover:-translate-y-1">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-100 text-2xl font-extrabold text-brand-600" aria-hidden="true">{i + 1}</span>
+                  <h3 className="mt-4 text-xl font-extrabold">{t(`programmes.${name}`)}</h3>
+                  <p className="mt-2 text-ink/75">{t(`programmes.${description}`)}</p>
+                  {note && <p className="mt-4 rounded-2xl bg-emerald-50 px-3 py-2 text-sm font-semibold text-emerald-900">{t(`programmes.${note}`)}</p>}
+                  {i === 0 && (
+                    <>
+                      <p className="mt-3 text-xs font-semibold text-ink/60 uppercase tracking-wider">{t('programmes.agesLevelsFees')}</p>
+                      <p className="mt-1 text-sm text-ink/75">{t('programmes.admissionDetails')}</p>
+                      <p className="mt-2 rounded-full bg-green-100 px-3 py-1 inline-block text-xs font-semibold text-green-900">{t('programmes.feesInfo')}</p>
+                    </>
+                  )}
+                  {i > 0 && (
+                    <p className="mt-3 inline-block rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-900">{t('programmes.availability')}</p>
+                  )}
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+
+        {/* Benefits Section */}
+        <div className="mt-20 border-t border-ink/10 pt-16">
+          <p className="eyebrow">{t('benefits.eyebrow')}</p>
+          <h2 className="h2">{t('benefits.heading')}</h2>
+          <p className="mt-3 max-w-2xl text-ink/70">{t('benefits.intro')}</p>
+          <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {benefits.map((key) => (
+              <li key={key} className="card"><h3 className="text-lg font-extrabold text-brand-600">{t(`benefits.${key}`)}</h3><p className="mt-2 text-ink/75">{t(`benefits.${key}Description`)}</p></li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   )
 }
 
-const benefits = ['concentration', 'memory', 'confidence', 'fluency']
-
 export function Benefits() {
-  const { t } = useLanguage()
-  return (
-    <section id="benefits" className="section reveal">
-      <p className="eyebrow">{t('benefits.eyebrow')}</p>
-      <h2 className="h2">{t('benefits.heading')}</h2>
-      <p className="mt-3 max-w-2xl text-ink/70">{t('benefits.intro')}</p>
-      <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {benefits.map((key) => (
-          <li key={key} className="card"><h3 className="text-lg font-extrabold text-brand-600">{t(`benefits.${key}`)}</h3><p className="mt-2 text-ink/75">{t(`benefits.${key}Description`)}</p></li>
-        ))}
-      </ul>
-    </section>
-  )
+  return null
 }
 
 const steps = ['enquiry', 'discuss', 'visit']

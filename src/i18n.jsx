@@ -12,7 +12,6 @@ const messages = {
       skip: 'Skip to content',
       about: 'About',
       programmes: 'Programmes',
-      benefits: 'Benefits',
       gallery: 'Gallery',
       team: 'Team',
       faqs: 'FAQs',
@@ -262,7 +261,7 @@ const messages = {
     language: { group: 'ভাষা বাছনি কৰক', english: 'English', assamese: 'অসমীয়া' },
     location: { locality: 'লখৰা', city: 'গুৱাহাটী' },
     common: {
-      skip: 'মূল বিষয়লৈ যাওক', about: 'আমাৰ বিষয়ে', programmes: 'কাৰ্যসূচী', benefits: 'শিকাৰ সুবিধা', gallery: 'ফটোসমূহ', team: 'দল', faqs: 'সঘনাই সোধা প্ৰশ্ন', contact: 'যোগাযোগ',
+      skip: 'মূল বিষয়লৈ যাওক', about: 'আমাৰ বিষয়ে', programmes: 'কাৰ্যসূচী', gallery: 'ফটোসমূহ', team: 'দল', faqs: 'সঘনাই সোধা প্ৰশ্ন', contact: 'যোগাযোগ',
       enquire: 'সোধক', enquireDemo: 'ডেমোৰ বাবে সোধক', whatsappNewTab: ' WhatsApp-ত (নতুন টেবত খোল খাব)', opensNewTab: ' (নতুন টেবত খোল খাব)',
       seeMaps: 'মেপত আমাক চাওক',
       logoAlt: 'SIP Abacus – সফলতা নিশ্চিত',
