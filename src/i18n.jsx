@@ -131,7 +131,7 @@ const messages = {
       monthly: 'Monthly fee',
       bookFee: 'Books',
       totalStart: 'Total to get started',
-      afterEnrolment: 'After you enrol',
+      afterEnrolment: 'After you enroll',
       perMonth: 'per month',
       bookNote: 'Books are charged after every four months, following the exam. The fee depends on the level your child is promoted to.',
       ctaHeading: 'Curious? See a class in action.',

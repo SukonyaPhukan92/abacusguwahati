@@ -169,7 +169,7 @@ export const feeStructure = [
     monthlyFee: 1500,
     bookFee: 550,
     total: 4100,
-    note: 'Initial enrolment total',
+    note: 'Initial enrollment total',
   },
   {
     level: 'Foundation Level 1',
@@ -177,7 +177,7 @@ export const feeStructure = [
     monthlyFee: 1500,
     bookFee: 720,
     total: 4270,
-    note: 'Initial enrolment total',
+    note: 'Initial enrollment total',
   },
   {
     level: 'Ongoing',
