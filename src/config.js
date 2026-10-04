@@ -102,12 +102,18 @@ export const gallery = [
   { src: 'gallery/craft-cards', group: 'centre', alt: 'Children holding up colourful handmade cards in the classroom', caption: 'Card-making activity' },
   { src: 'gallery/flag-celebration', group: 'centre', alt: 'Two young children smiling, one holding the Indian national flag', caption: 'Celebrating with the tricolour' },
   { src: 'gallery/activity-time', group: 'centre', alt: 'Children seated at yellow desks with paper gift bags', caption: 'Activity time' },
+  { src: 'gallery/handmade-cards-selfie', group: 'centre' },
+  { src: 'gallery/abacus-worksheet-practice', group: 'centre' },
   { src: 'gallery/regional-competition-2024', group: 'events', alt: 'Large group photo in front of the Regional SIP Abacus Competition banner, Assam, 28 July 2024', caption: 'Regional SIP Abacus Competition, Assam – 28 July 2024' },
   { src: 'gallery/competition-day', group: 'events', alt: 'Children writing at desks in a large hall during a competition', caption: 'Competition day' },
   { src: 'gallery/prize-giving-2024', group: 'events', alt: 'A student in an orange SIP T-shirt receiving a trophy on stage at an abacus competition in 2024', caption: 'Prize-giving, 2024' },
   { src: 'gallery/volunteers-2024', group: 'events', alt: 'Volunteers in blue SIP T-shirts at the Regional SIP Abacus Competition 2024, Assam', caption: 'Volunteers at the regional competition, 2024' },
   { src: 'gallery/volunteer-team', group: 'events', alt: 'A team of volunteers in blue SIP T-shirts standing together at an event venue', caption: 'Event volunteer team' },
   { src: 'gallery/annual-awards-2022', group: 'events', alt: 'Teachers holding certificates on stage at the SIP Assam Annual Awards 2022', caption: 'SIP Assam Annual Awards 2022 (14th Annual Meet, Feb 2023)' },
+  { src: 'gallery/teachers-celebration', group: 'events' },
+  { src: 'gallery/teachers-in-hall', group: 'events' },
+  { src: 'gallery/sboa-school-visit', group: 'events' },
+  { src: 'gallery/sboa-school-gift', group: 'events' },
 ]
 
 export const heroImage = gallery[0]

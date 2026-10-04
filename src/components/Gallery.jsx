@@ -25,6 +25,12 @@ const photoKeys = {
   'gallery/volunteers-2024': ['volunteersAlt', 'volunteers'],
   'gallery/volunteer-team': ['teamAlt', 'team'],
   'gallery/annual-awards-2022': ['awardsAlt', 'awards'],
+  'gallery/teachers-celebration': ['celebAlt', 'celeb'],
+  'gallery/handmade-cards-selfie': ['cardsSelfieAlt', 'cardsSelfie'],
+  'gallery/abacus-worksheet-practice': ['worksheetAlt', 'worksheet'],
+  'gallery/teachers-in-hall': ['hallAlt', 'hall'],
+  'gallery/sboa-school-visit': ['sboaVisitAlt', 'sboaVisit'],
+  'gallery/sboa-school-gift': ['sboaGiftAlt', 'sboaGift'],
 }
 
 function Viewer({ items, index, onClose, onMove, t }) {
