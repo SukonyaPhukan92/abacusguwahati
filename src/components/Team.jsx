@@ -13,7 +13,7 @@ export default function Team() {
           <p className="mx-auto max-w-2xl text-lg text-ink/70">{t('team.subtitle')}</p>
         </div>
 
-        <div className="reveal mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="reveal mt-12 grid gap-8 md:grid-cols-2">
           {team.map((member) => (
             <div
               key={member.name}

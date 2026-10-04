@@ -237,6 +237,10 @@ const messages = {
           role: 'CI · FND 1 completed',
           bio: 'Working at the SIP Abacus Lakhra centre (CI) since June 2026.',
         },
+        rubi: {
+          role: 'CI · Level 7 completed',
+          bio: 'Working at the SIP Abacus Lakhra centre (CI) since 2023.',
+        },
       },
     },
     faqs: {
@@ -486,6 +490,10 @@ const messages = {
         priti: {
           role: 'CI · FND 1 সম্পূৰ্ণ',
           bio: 'জুন ২০২৬ ৰ পৰা SIP Abacus লখৰা কেন্দ্ৰত (CI) কৰ্মৰত।',
+        },
+        rubi: {
+          role: 'CI · স্তৰ ৭ সম্পূৰ্ণ',
+          bio: '২০২৩ চনৰ পৰা SIP Abacus লখৰা কেন্দ্ৰত (CI) কৰ্মৰত।',
         },
       },
     },

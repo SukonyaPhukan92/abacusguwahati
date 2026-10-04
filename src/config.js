@@ -211,6 +211,14 @@ export const team = [
     imagePosition: 'center 20%',
     bio: 'Working at the SIP Abacus Lakhra centre (CI) since June 2026.',
   },
+  {
+    id: 'rubi',
+    name: 'Rubi Devi',
+    role: 'CI · Level 7 completed',
+    image: 'team/rubi-devi',
+    imagePosition: 'center 25%',
+    bio: 'Working at the SIP Abacus Lakhra centre (CI) since 2023.',
+  },
 ]
 
 export const faqs = [
