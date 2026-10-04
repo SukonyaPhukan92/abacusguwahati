@@ -5,7 +5,7 @@ export default function Team() {
   const { t } = useLanguage()
 
   return (
-    <section className="section bg-stone-50 py-16">
+    <section id="team" className="section bg-stone-50 py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="reveal space-y-3 text-center">
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-brand-600">{t('team.label')}</p>
