@@ -233,6 +233,10 @@ const messages = {
           role: 'Co-LCL · GMC completed',
           bio: 'A dedicated and passionate teacher committed to helping students learn, grow and achieve their goals. I believe in creating a positive, friendly and engaging learning environment where every student feels confident to participate. I focus on building strong concepts, encouraging curiosity, and developing both academic skills and good values in my students.',
         },
+        priti: {
+          role: 'CI · FND 1 completed',
+          bio: 'Working at the SIP Abacus Lakhra centre (CI) since June 2026.',
+        },
       },
     },
     faqs: {
@@ -478,6 +482,10 @@ const messages = {
         gitika: {
           role: 'সহকাৰী স্থানীয় কেন্দ্ৰ নেতা (Co-LCL) · GMC সম্পূৰ্ণ',
           bio: 'এগৰাকী নিষ্ঠাবান আৰু আগ্ৰহী শিক্ষয়িত্ৰী, যিয়ে শিক্ষাৰ্থীসকলক শিকিবলৈ, আগবাঢ়িবলৈ আৰু নিজৰ লক্ষ্য পূৰণ কৰিবলৈ সহায় কৰিবলৈ প্ৰতিশ্ৰুতিবদ্ধ। মই এনে এক ইতিবাচক, বন্ধুত্বপূৰ্ণ আৰু আকৰ্ষণীয় শিক্ষণ পৰিৱেশ গঢ়াত বিশ্বাস কৰোঁ, যাতে প্ৰতিজন শিক্ষাৰ্থীয়ে অংশগ্ৰহণ কৰিবলৈ আত্মবিশ্বাসী অনুভৱ কৰে। মই সুদৃঢ় ধাৰণা গঢ়ি তোলাত, কৌতূহলক উৎসাহিত কৰাত আৰু শিক্ষাৰ্থীৰ মাজত শৈক্ষিক দক্ষতাৰ লগতে ভাল মূল্যবোধ গঢ়ি তোলাত গুৰুত্ব দিওঁ।',
+        },
+        priti: {
+          role: 'CI · FND 1 সম্পূৰ্ণ',
+          bio: 'জুন ২০২৬ ৰ পৰা SIP Abacus লখৰা কেন্দ্ৰত (CI) কৰ্মৰত।',
         },
       },
     },

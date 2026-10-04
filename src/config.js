@@ -203,6 +203,14 @@ export const team = [
     imagePosition: 'center 62%',
     bio: 'A dedicated and passionate teacher committed to helping students learn, grow and achieve their goals.',
   },
+  {
+    id: 'priti',
+    name: 'Priti Das',
+    role: 'CI · FND 1 completed',
+    image: 'team/priti-das',
+    imagePosition: 'center 20%',
+    bio: 'Working at the SIP Abacus Lakhra centre (CI) since June 2026.',
+  },
 ]
 
 export const faqs = [
