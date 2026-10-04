@@ -224,6 +224,16 @@ const messages = {
       label: 'Meet the team',
       title: 'Leadership at SIP Abacus, Lakhra',
       subtitle: 'Dedicated educators committed to fostering a love for mathematics and learning.',
+      members: {
+        mathura: {
+          role: 'Principal & Local Centre Leader (LCL)',
+          bio: 'Leading the SIP Abacus Lakhra centre with dedication to educational excellence and student development.',
+        },
+        gitika: {
+          role: 'Co-LCL · GMC completed',
+          bio: 'A dedicated and passionate teacher committed to helping students learn, grow and achieve their goals. I believe in creating a positive, friendly and engaging learning environment where every student feels confident to participate. I focus on building strong concepts, encouraging curiosity, and developing both academic skills and good values in my students.',
+        },
+      },
     },
     faqs: {
       eyebrow: 'FAQs',
@@ -460,6 +470,16 @@ const messages = {
       label: 'দলৰ সৈতে পৰিচয় কৰক',
       title: 'SIP Abacus, লখৰাৰ নেতৃত্ব',
       subtitle: 'গণিত আৰু শিক্ষাৰ প্ৰতি ভালোবাসা গঢ়াৰ বাবে নিবেদিত শিক্ষক-শিক্ষয়িত্ৰী।',
+      members: {
+        mathura: {
+          role: 'অধ্যক্ষ আৰু স্থানীয় কেন্দ্ৰ নেতা (LCL)',
+          bio: 'শিক্ষাৰ উৎকৰ্ষ আৰু শিক্ষাৰ্থীৰ বিকাশৰ প্ৰতি নিষ্ঠাৰে SIP Abacus লখৰা কেন্দ্ৰ পৰিচালনা কৰি আছে।',
+        },
+        gitika: {
+          role: 'সহকাৰী স্থানীয় কেন্দ্ৰ নেতা (Co-LCL) · GMC সম্পূৰ্ণ',
+          bio: 'এগৰাকী নিষ্ঠাবান আৰু আগ্ৰহী শিক্ষয়িত্ৰী, যিয়ে শিক্ষাৰ্থীসকলক শিকিবলৈ, আগবাঢ়িবলৈ আৰু নিজৰ লক্ষ্য পূৰণ কৰিবলৈ সহায় কৰিবলৈ প্ৰতিশ্ৰুতিবদ্ধ। মই এনে এক ইতিবাচক, বন্ধুত্বপূৰ্ণ আৰু আকৰ্ষণীয় শিক্ষণ পৰিৱেশ গঢ়াত বিশ্বাস কৰোঁ, যাতে প্ৰতিজন শিক্ষাৰ্থীয়ে অংশগ্ৰহণ কৰিবলৈ আত্মবিশ্বাসী অনুভৱ কৰে। মই সুদৃঢ় ধাৰণা গঢ়ি তোলাত, কৌতূহলক উৎসাহিত কৰাত আৰু শিক্ষাৰ্থীৰ মাজত শৈক্ষিক দক্ষতাৰ লগতে ভাল মূল্যবোধ গঢ়ি তোলাত গুৰুত্ব দিওঁ।',
+        },
+      },
     },
     faqs: {
       eyebrow: 'সঘনাই সোধা প্ৰশ্ন', heading: 'অভিভাৱকসকলে সোধা প্ৰশ্ন',

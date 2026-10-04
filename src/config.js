@@ -188,10 +188,20 @@ export const feeStructure = [
 
 export const team = [
   {
+    id: 'mathura',
     name: 'Mathura Mohan Roy',
     role: 'Principal & Local Centre Leader (LCL)',
     image: 'team/mathura-mohan-roy',
+    imagePosition: 'center',
     bio: 'Leading the SIP Abacus Lakhra centre with dedication to educational excellence and student development.',
+  },
+  {
+    id: 'gitika',
+    name: 'Gitika Das',
+    role: 'Co-LCL · GMC completed',
+    image: 'team/gitika-das',
+    imagePosition: 'center 62%',
+    bio: 'A dedicated and passionate teacher committed to helping students learn, grow and achieve their goals.',
   },
 ]
 
