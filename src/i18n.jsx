@@ -81,8 +81,10 @@ const messages = {
       brainGymDescription: 'Short, playful activities designed to support focus and coordination as part of the SIP Abacus programme.',
       speedWriting: 'Speed Writing',
       speedWritingDescription: 'Handwriting-focused practice listed alongside abacus and Brain Gym in the SIP Abacus programme.',
-      agesLevelsFees: 'Ages, levels & fees',
-      availability: 'Availability, ages & fees',
+      agesLevelsFees: 'Admission & progression',
+      availability: 'Available for all levels',
+      admissionDetails: 'Entry: Junior 1 (UKG/Class 1), Junior 2 (Class 2), Foundation 1 (Class 3). Progress through Junior, Foundation, Advance, and G.M. levels.',
+      feesInfo: 'Registration ₹2,050 · Monthly ₹1,500 · Book fees ₹550–720 (varies by level)',
       confirmWithCentre: 'confirm with centre',
     },
     benefits: {
@@ -293,7 +295,7 @@ const messages = {
       abacusNote: 'লখৰাত উপলব্ধ — SIP লখৰাৰ প্ৰমাণপত্ৰত SIP Abacus Junior কাৰ্যসূচীৰ Junior Level 1 উল্লেখ আছে।',
       brainGym: 'Brain Gym', brainGymDescription: 'মনোযোগ আৰু সমন্বয়ৰ সহায়ৰ বাবে SIP Abacus-ৰ কাৰ্যসূচীত উল্লেখ কৰা চুটি, আনন্দদায়ক কাৰ্যকলাপ।',
       speedWriting: 'Speed Writing', speedWritingDescription: 'হাতৰ আখৰৰ অনুশীলন, যাক SIP Abacus-এ এবাকাছ আৰু Brain Gym-ৰ সৈতে উল্লেখ কৰিছে।',
-      agesLevelsFees: 'বয়স, স্তৰ আৰু মাচুল', availability: 'উপলব্ধতা, বয়স আৰু মাচুল', confirmWithCentre: 'কেন্দ্ৰৰ পৰা নিশ্চিত কৰক',
+      agesLevelsFees: 'ভৰ্তি আৰু অগ্ৰগতি', availability: 'সকল স্তৰৰ বাবে উপলব্ধ', admissionDetails: 'প্ৰৱেশ: Junior 1 (UKG/Class 1), Junior 2 (Class 2), Foundation 1 (Class 3)। Junior, Foundation, Advance আৰু G.M. স্তৰৰ মাজেৰে অগ্ৰগতি কৰক।', feesInfo: 'ৰেজিস্ট্ৰেশন ₹২০৫০ · মাসিক ₹১৫০০ · বহী মাচুল ₹৫৫০–৭২০ (স্তৰৰ উপৰ ভিত্তিত পৰিৱৰ্তনশীল)', confirmWithCentre: 'কেন্দ্ৰৰ পৰা নিশ্চিত কৰক',
     },
     benefits: {
       eyebrow: 'শিকাৰ সুবিধা', heading: 'নিয়মীয়া অনুশীলনে গঢ়ি তোলাত সহায় কৰে', intro: 'এইবোৰ শিকাৰ লক্ষ্য, নিশ্চয়তা নহয়। প্ৰতিটো শিশুৱে নিজৰ গতিত শিকে আৰু ফলাফল বেলেগ বেলেগ হয়।',
