@@ -143,6 +143,13 @@ export const admissionLevels = [
   { label: 'Foundation 1', criteria: 'Class 3' },
 ]
 
+export const schedule = [
+  { day: 'thursday', morning: [], evening: ['5:00 PM'] },
+  { day: 'friday', morning: [], evening: ['5:00 PM'] },
+  { day: 'saturday', morning: ['10:00 AM'], evening: ['4:30 PM'] },
+  { day: 'sunday', morning: ['9:00 AM', '11:30 AM'], evening: ['4:00 PM'] },
+]
+
 export const progressionLevels = {
   junior: ['Junior 1', 'Junior 2', 'Junior 3', 'Junior 4'],
   foundation: ['Foundation 1', 'Foundation 2', 'Foundation 3', 'Foundation 4'],

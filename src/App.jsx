@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
 import AbacusPractice from './components/AbacusPractice.jsx'
-import { About, Programmes, Benefits, GetStarted } from './components/Sections.jsx'
+import { About, GetStarted } from './components/Sections.jsx'
+import { Programmes } from './components/Programmes.jsx'
 import Gallery from './components/Gallery.jsx'
 import { Faqs, Feedback } from './components/Faqs.jsx'
 import Team from './components/Team.jsx'
@@ -100,7 +101,6 @@ export default function App() {
         <About />
         <AbacusPractice />
         <Programmes />
-        <Benefits />
         <GetStarted />
         <Gallery />
         <Feedback />
