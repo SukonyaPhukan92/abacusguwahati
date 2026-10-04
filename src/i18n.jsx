@@ -36,7 +36,7 @@ const messages = {
       yearsNumber: '23',
       yearsLabel: 'Years of transforming lives',
       studentsNumber: '1.1M',
-      studentsLabel: 'Students trained',
+      studentsLabel: 'Students Trained',
       nationalNote: '23 years and 1.1M students: SIP Abacus nationwide',
       heroAlt: 'Smiling children in orange SIP T-shirts holding up cards in class, with an abacus on the desk',
     },
