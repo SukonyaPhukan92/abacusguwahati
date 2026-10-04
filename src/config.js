@@ -213,8 +213,4 @@ export const faqs = [
     q: 'Can I visit or attend a demo class?',
     a: 'You can ask the centre about visiting or arranging a demo. Availability is decided by the centre. Call or message on WhatsApp to book.',
   },
-  {
-    q: 'Is this the official SIP Abacus website?',
-    a: 'This page is about the Lakhra, Guwahati centre. For the national brand, visit the official SIP Abacus India website.',
-  },
 ]
