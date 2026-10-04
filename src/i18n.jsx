@@ -37,7 +37,7 @@ const messages = {
       yearsLabel: 'Years of transforming lives',
       studentsNumber: '1.1M',
       studentsLabel: 'Students trained',
-      nationalNote: 'SIP Abacus nationwide, the programme your child joins at Lakhra',
+      nationalNote: '23 years and 1.1M students: SIP Abacus nationwide',
       heroAlt: 'Smiling children in orange SIP T-shirts holding up cards in class, with an abacus on the desk',
     },
     about: {
@@ -331,7 +331,7 @@ const messages = {
       yearsLabel: 'বছৰ ধৰি জীৱন ৰূপান্তৰৰ যাত্ৰা',
       studentsNumber: '১১ লাখ',
       studentsLabel: 'শিক্ষাৰ্থী প্ৰশিক্ষিত',
-      nationalNote: 'সমগ্ৰ SIP Abacus-ৰ পৰিসংখ্যা, যি কাৰ্যসূচীত আপোনাৰ শিশুৱে লখৰাত যোগ দিয়ে',
+      nationalNote: '২৩ বছৰ আৰু ১১ লাখ শিক্ষাৰ্থী: সমগ্ৰ SIP Abacus-ৰ পৰিসংখ্যা',
       heroAlt: 'কমলা ৰঙৰ SIP টি-চাৰ্ট পিন্ধা হাঁহিমুখীয়া শিশুৱে শ্ৰেণীত কাৰ্ড দেখুৱাইছে; সন্মুখত এটা এবাকাছ আছে',
     },
     about: {
