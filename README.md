@@ -32,6 +32,17 @@ Each push to `main` triggers atomic deployments with zero-downtime updates via N
 
 ## Changelog
 
+### 2026-10-04
+- **Centre information added:** Class schedules, admission/progression levels, fee structure
+  - Hours: Thursday–Friday 5:00 PM; Saturday 10:00 AM, 4:30 PM; Sunday 9:00 AM, 11:30 AM, 4:00 PM
+  - Programmes confirmed: Abacus & Mental Arithmetic, Brain Gym, Speed Writing
+  - Admission levels: Junior 1 (Class UKG/1), Junior 2 (Class 2), Foundation 1 (Class 3)
+  - Progression: Junior (4 levels), Foundation (4 levels), Advance (4 levels), G.M. (3 levels)
+  - Fee structure: Registration ₹2,050, monthly ₹1,500, book fees vary by level
+  - Social media: Instagram and Facebook links added to config
+- **FAQ updates:** Both English and Assamese FAQs now include specific schedules, fees, and levels (via `src/i18n.jsx`)
+- **Config exports:** New `admissionLevels`, `progressionLevels`, `feeStructure` in `src/config.js`
+
 ### 2026-10-02
 - **i18n module update:** Modified gallery caption (mixedUniforms key) from "Classwork in a mixed-uniform classroom" to "Learning in progress" in both en and as locales via `src/i18n.jsx`
 - **Build artifacts:** No dependency changes; Vite cache invalidation via content-hash
