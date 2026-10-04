@@ -46,7 +46,7 @@ export default function Team() {
           </div>
         </div>
 
-        <div className="reveal mt-8 grid gap-8 md:grid-cols-3">
+        <div className="reveal mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {members.map((member) => (
             <div key={member.id} className={cardClass}>
               <div className="flex h-full flex-col">

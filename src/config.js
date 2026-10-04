@@ -206,7 +206,7 @@ export const team = [
   {
     id: 'priti',
     name: 'Priti Das',
-    role: 'CI · FND 1 completed',
+    role: 'Course Instructor (CI) · FND 1 completed',
     image: 'team/priti-das',
     imagePosition: 'center 20%',
     bio: 'Working at the SIP Abacus Lakhra centre (CI) since June 2026.',
@@ -214,10 +214,18 @@ export const team = [
   {
     id: 'rubi',
     name: 'Rubi Devi',
-    role: 'CI · Level 7 completed',
+    role: 'Course Instructor (CI) · Level 7 completed',
     image: 'team/rubi-devi',
     imagePosition: 'center 25%',
     bio: 'Working at the SIP Abacus Lakhra centre (CI) since 2023.',
+  },
+  {
+    id: 'muskan',
+    name: 'Muskan Kumari',
+    role: 'Course Instructor (CI) · Foundation 3',
+    image: 'team/muskan-kumari',
+    imagePosition: 'center 20%',
+    bio: 'Working at the SIP Abacus Lakhra centre as a Course Instructor (CI) since 2025.',
   },
 ]
 
