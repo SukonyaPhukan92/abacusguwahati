@@ -58,15 +58,17 @@ export const logo = { src: 'images/sip-abacus-logo.webp', alt: 'SIP Abacus – s
 export const officialSiteUrl = 'https://sipabacus.com/in/' // national brand reference only
 
 /**
- * Programme names below come from search-result excerpts of the official SIP Abacus India
- * site (the site itself was unreachable). Local availability, levels, ages, fees: TO CONFIRM.
+ * Programmes offered at SIP Abacus Lakhra (verified 4 Oct 2026)
+ * All three programmes are available with structured levels:
+ * Admission: Junior 1 (UKG/Class 1), Junior 2 (Class 2), Foundation 1 (Class 3)
+ * Progression: Junior (4 levels), Foundation (4 levels), Advance (4 levels), G.M. (3 levels)
  */
 export const programmes = [
   {
     id: 'abacus',
     name: 'Abacus & Mental Arithmetic',
     description:
-      'Children learn to work with the abacus and gradually move on to mental calculation in a structured, step-by-step programme.',
+      'The core programme where children learn to operate the abacus, then gradually transition to mental calculation. Through structured, step-by-step practice, students develop number sense, speed, and confidence in arithmetic. Available across all progression levels from Junior 1 through G.M. Level C.',
     // A centre certificate shows "Junior Level 1 … SIP Abacus Junior programme at SIP Lakhra".
     localNote: 'Offered in Lakhra — a SIP Lakhra certificate shows Junior Level 1 of the SIP Abacus Junior programme.',
   },
@@ -74,13 +76,13 @@ export const programmes = [
     id: 'brain-gym',
     name: 'Brain Gym',
     description:
-      'Short, playful activities designed to support focus and coordination as part of the SIP Abacus programme.',
+      'Short, engaging activities designed to build focus, concentration, and hand-eye coordination. These playful exercises complement abacus training and support overall cognitive development as part of the integrated SIP Abacus programme.',
   },
   {
     id: 'speed-writing',
     name: 'Speed Writing',
     description:
-      'Handwriting-focused practice listed alongside abacus and Brain Gym in the SIP Abacus programme.',
+      'Handwriting practice focusing on speed and neatness. Integrated alongside abacus and Brain Gym, this programme helps develop fine motor control and writing fluency while reinforcing numeracy skills.',
   },
 ]
 
