@@ -85,7 +85,7 @@ export function Programmes() {
 
   return (
     <section id="programmes" className="bg-white">
-      <div className="section reveal space-y-24">
+      <div className="section reveal space-y-12 md:space-y-24">
         <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-brand-50 via-white to-brand-100 p-8 shadow-card sm:p-12">
           <div aria-hidden="true" className="pointer-events-none absolute -right-10 -top-10 h-56 w-56 rounded-full bg-orange-logo/15" />
           <div aria-hidden="true" className="pointer-events-none absolute -bottom-16 right-24 h-40 w-40 rounded-full bg-brand-600/10" />
@@ -167,7 +167,7 @@ export function Programmes() {
             </ul>
           </div>
 
-          <ol className="mt-8 grid gap-4 md:grid-cols-4">
+          <ol className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {tiers.map(([tier, label], i) => {
               const levels = progressionLevels[tier]
               const entry = admissionLevels.some((a) => levels.includes(a.label))

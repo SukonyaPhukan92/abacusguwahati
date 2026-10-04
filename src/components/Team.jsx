@@ -31,8 +31,8 @@ export default function Team() {
   const [leader, ...members] = team
 
   return (
-    <section id="team" className="section bg-stone-50 py-16">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+    <section id="team" className="bg-stone-50">
+      <div className="section">
         <div className="reveal space-y-3 text-center">
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-brand-600">{t('team.label')}</p>
           <h2 className="h2">{t('team.title')}</h2>

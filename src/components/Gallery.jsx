@@ -83,7 +83,7 @@ export default function Gallery() {
         return (
           <div key={key} className="mt-10">
             <h3 className="text-xl font-extrabold">{t(`gallery.${labelKey}`)}</h3>
-            <ul className="mt-4 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
+            <ul className={`mt-4 grid grid-cols-2 gap-3 sm:gap-4 ${list.length % 3 === 0 ? "md:grid-cols-3" : "lg:grid-cols-5"}`}>
               {list.map((g) => (
                 <li key={g.src}>
                   <button type="button" onClick={() => setOpen(items.indexOf(g))} className="group relative block w-full overflow-hidden rounded-3xl bg-brand-100 shadow-card">

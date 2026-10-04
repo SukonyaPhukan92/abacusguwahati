@@ -59,13 +59,13 @@ export default function Hero() {
             </div>
           </dl>
         </div>
-        <div className="relative mx-auto w-full max-w-md md:max-w-none">
+        <div className="relative mx-auto mb-8 w-full max-w-md md:mb-0 md:max-w-none">
           <div className="absolute -inset-3 rotate-2 rounded-[2.5rem] bg-white/20" aria-hidden="true" />
           <figure className="relative overflow-hidden rounded-[2rem] border-4 border-white bg-white shadow-card">
             <Photo item={{ ...heroImage, alt: t('hero.heroAlt') }} eager sizes="(min-width: 768px) 45vw, 90vw" className="aspect-[5/4] w-full object-cover object-[center_75%]" />
             <figcaption className="sr-only">{heroImage.caption}</figcaption>
           </figure>
-          <div className="absolute -bottom-8 -left-4 w-32 rounded-3xl bg-white p-2 shadow-card sm:-left-8 sm:w-40">
+          <div className="absolute -bottom-8 -left-4 w-32 rounded-3xl bg-white p-2 shadow-card sm:-left-8 sm:w-40 md:hidden lg:block">
             <Abacus className="w-full" />
           </div>
         </div>
@@ -73,8 +73,8 @@ export default function Hero() {
       <div className="relative bg-white text-ink">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-1 px-4 py-2.5 text-center sm:flex-row sm:justify-between sm:text-left md:px-6">
           <div className="flex items-center gap-3">
-            <span className="bg-orange-logo px-3 py-1 text-lg font-extrabold leading-none text-white" style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}>SIP Academy</span>
-            <span className="text-[11px] font-semibold uppercase tracking-[0.3em] text-ink/70">Creating Intelligence</span>
+            <span className="whitespace-nowrap bg-orange-logo px-3 py-1 text-lg font-extrabold leading-none text-white" style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}>SIP Academy</span>
+            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-ink/70 sm:text-[11px] sm:tracking-[0.3em]">Creating Intelligence</span>
           </div>
           <p className="text-xs text-ink/70">{t('hero.nationalNote')}</p>
         </div>
