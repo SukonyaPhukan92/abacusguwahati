@@ -23,12 +23,20 @@ export const centre = {
   phoneDisplay: '086386 69857',
   googleRating: { value: 4.9, count: 104 }, // not used in structured data
 
-  // ---- Still unverified ----
+  // ---- Verified from centre (4 Oct 2026) ----
   // WhatsApp enquiries go to the centre's listed mobile (086386 69857), as requested by the site owner.
   // Digits only, with country code. Change here if the centre uses a different WhatsApp number.
   whatsapp: '918638669857',
   email: null, // used for "mailto:" enquiries if set
-  hours: null, // not listed on Google Maps yet. e.g. ['Mon–Fri: 4:00 pm – 7:00 pm'] – array of strings
+
+  // Class schedules verified with centre (4 Oct 2026)
+  hours: [
+    'Thursday: 5:00 PM',
+    'Friday: 5:00 PM',
+    'Saturday: 10:00 AM, 4:30 PM',
+    'Sunday: 9:00 AM, 11:30 AM, 4:00 PM',
+    'Office open every day',
+  ],
   siteUrl: null, // public URL once launched (used in structured data)
 
   // Supplied by the site owner (Google Maps listing for this centre)
@@ -39,7 +47,8 @@ export const centre = {
   mapEmbedUrl: 'https://maps.google.com/maps?q=26.1178433,91.7484423&z=17&hl=en&output=embed',
 
   social: {
-    // facebook: 'https://…', instagram: 'https://…'  – only verified centre pages
+    instagram: 'https://www.instagram.com/sipabacuslokhra?stkn=aDB1bWo2YjZtY2Nt',
+    facebook: 'https://www.facebook.com/share/1d14X2pqP7/',
   },
 }
 
@@ -122,6 +131,52 @@ export const testimonials = [
   },
 ]
 
+/**
+ * Programme levels and admission criteria (verified 4 Oct 2026)
+ * Admission levels are based on school class; progression levels depend on the tier
+ */
+export const admissionLevels = [
+  { label: 'Junior 1', criteria: 'Class UKG or Class 1' },
+  { label: 'Junior 2', criteria: 'Class 2' },
+  { label: 'Foundation 1', criteria: 'Class 3' },
+]
+
+export const progressionLevels = {
+  junior: ['Junior 1', 'Junior 2', 'Junior 3', 'Junior 4'],
+  foundation: ['Foundation 1', 'Foundation 2', 'Foundation 3', 'Foundation 4'],
+  advance: ['Advance 1', 'Advance 2', 'Advance 3', 'Advance 4'],
+  gm: ['G.M - A', 'G.M - B', 'G.M - C'],
+}
+
+/**
+ * Fee structure (verified 4 Oct 2026)
+ * Monthly fees: ₹1,500 (consistent across levels)
+ * Book fees: Charged after every 4 months (after exam), varies by promoted level
+ */
+export const feeStructure = [
+  {
+    level: 'Junior 1 & 2',
+    registrationFee: 2050,
+    monthlyFee: 1500,
+    bookFee: 550,
+    total: 4100,
+    note: 'Initial enrolment total',
+  },
+  {
+    level: 'Foundation Level 1',
+    registrationFee: 2050,
+    monthlyFee: 1500,
+    bookFee: 720,
+    total: 4270,
+    note: 'Initial enrolment total',
+  },
+  {
+    level: 'Ongoing',
+    monthlyFee: 1500,
+    bookFee: 'Varies by level (charged after every 4 months post-exam)',
+  },
+]
+
 export const faqs = [
   {
     q: 'What is abacus learning?',
@@ -129,19 +184,23 @@ export const faqs = [
   },
   {
     q: 'What does SIP Abacus teach besides abacus?',
-    a: 'The official SIP Abacus programme also mentions Brain Gym and Speed Writing. Please ask the Lakhra centre which of these it currently offers.',
+    a: 'The official SIP Abacus programme also includes Brain Gym and Speed Writing. SIP Lakhra offers all three programmes.',
   },
   {
     q: 'What ages and levels are available?',
-    a: 'This depends on the programme and the centre. Please contact the Lakhra centre to discuss what suits your child.',
+    a: 'Admission starts at Junior 1 (Class UKG/1), Junior 2 (Class 2), and Foundation 1 (Class 3). Progression continues through Junior (4 levels), Foundation (4 levels), Advance (4 levels), and G.M. (3 levels). Ask the centre about your child\'s eligibility.',
   },
   {
     q: 'What are the fees and batch timings?',
-    a: 'We do not list fees or timings here because they must come from the centre. Send an enquiry or call the centre for current details.',
+    a: 'Classes run Thursday–Sunday with multiple time slots (morning and evening). Registration fees start at ₹2,050, monthly fees at ₹1,500, with book fees varying by level. Contact the centre for specific batch timings and current fees.',
+  },
+  {
+    q: 'When can my child join?',
+    a: 'Classes are scheduled Thursday (5:00 PM), Friday (5:00 PM), Saturday (10:00 AM, 4:30 PM), and Sunday (9:00 AM, 11:30 AM, 4:00 PM). The office is open every day. Call or visit to arrange a demo.',
   },
   {
     q: 'Can I visit or attend a demo class?',
-    a: 'You can ask the centre about visiting or arranging a demo. Availability is decided by the centre.',
+    a: 'You can ask the centre about visiting or arranging a demo. Availability is decided by the centre. Call or message on WhatsApp to book.',
   },
   {
     q: 'Is this the official SIP Abacus website?',
