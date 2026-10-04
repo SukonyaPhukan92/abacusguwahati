@@ -245,6 +245,10 @@ const messages = {
           role: 'Course Instructor (CI) · Foundation 3',
           bio: 'Working at the SIP Abacus Lakhra centre as a Course Instructor (CI) since 2025.',
         },
+        nitika: {
+          role: 'Course Instructor (CI) · Level 6 completed',
+          bio: 'Working at the SIP Abacus Lakhra centre as a Course Instructor (CI) since 2024.',
+        },
       },
     },
     faqs: {
@@ -502,6 +506,10 @@ const messages = {
         muskan: {
           role: 'কোৰ্ছ ইনষ্ট্ৰাক্টৰ (CI) · Foundation 3',
           bio: '২০২৫ চনৰ পৰা SIP Abacus লখৰা কেন্দ্ৰত কোৰ্ছ ইনষ্ট্ৰাক্টৰ (CI) হিচাপে কৰ্মৰত।',
+        },
+        nitika: {
+          role: 'কোৰ্ছ ইনষ্ট্ৰাক্টৰ (CI) · স্তৰ ৬ সম্পূৰ্ণ',
+          bio: '২০২৪ চনৰ পৰা SIP Abacus লখৰা কেন্দ্ৰত কোৰ্ছ ইনষ্ট্ৰাক্টৰ (CI) হিচাপে কৰ্মৰত।',
         },
       },
     },

@@ -227,6 +227,14 @@ export const team = [
     imagePosition: 'center 20%',
     bio: 'Working at the SIP Abacus Lakhra centre as a Course Instructor (CI) since 2025.',
   },
+  {
+    id: 'nitika',
+    name: 'Nitika Mandal',
+    role: 'Course Instructor (CI) · Level 6 completed',
+    image: 'team/nitika-mandal',
+    imagePosition: 'center 20%',
+    bio: 'Working at the SIP Abacus Lakhra centre as a Course Instructor (CI) since 2024.',
+  },
 ]
 
 export const faqs = [

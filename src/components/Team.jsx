@@ -46,9 +46,9 @@ export default function Team() {
           </div>
         </div>
 
-        <div className="reveal mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="reveal mt-8 flex flex-wrap justify-center gap-6">
           {members.map((member) => (
-            <div key={member.id} className={cardClass}>
+            <div key={member.id} className={`${cardClass} w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]`}>
               <div className="flex h-full flex-col">
                 <Photo member={member} className="h-72" />
                 <Details member={member} t={t} className="flex-1 p-6" />
