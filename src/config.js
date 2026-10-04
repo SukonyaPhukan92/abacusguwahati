@@ -177,6 +177,15 @@ export const feeStructure = [
   },
 ]
 
+export const team = [
+  {
+    name: 'Mathura Mohan Roy',
+    role: 'Principal & Local Centre Leader (LCL)',
+    image: 'team/mathura-mohan-roy',
+    bio: 'Leading the SIP Abacus Lakhra centre with dedication to educational excellence and student development.',
+  },
+]
+
 export const faqs = [
   {
     q: 'What is abacus learning?',

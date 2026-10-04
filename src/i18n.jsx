@@ -163,6 +163,11 @@ const messages = {
       quote2: 'I have seen very good improvement in my daughter. The teachers are very nice and kind. They guide my daughter and all the students very gently.',
       quote3: 'This is a new and exciting experience for my child. I hope it will bring great learning and confidence-building opportunities in the future.',
     },
+    team: {
+      label: 'Meet the team',
+      title: 'Leadership at SIP Abacus, Lakhra',
+      subtitle: 'Dedicated educators committed to fostering a love for mathematics and learning.',
+    },
     faqs: {
       eyebrow: 'FAQs',
       heading: 'Questions parents ask',
@@ -329,6 +334,11 @@ const messages = {
       quote1: 'এবাকাছৰ শ্ৰেণীত যোগ দিয়াৰ পিছত মোৰ শিশুৰ মনোযোগ আৰু মানসিক গণিতত বহুত উন্নতি হৈছে। শিক্ষকে সহায় কৰে আৰু প্ৰতিটো ধাৰণা স্পষ্টকৈ বুজাই দিয়ে।',
       quote2: 'মোৰ ছোৱালীৰ বহুত ভাল উন্নতি দেখিছোঁ। শিক্ষক-শিক্ষয়িত্ৰীসকল অতি মৰমিয়াল আৰু দয়ালু। তেওঁলোকে মোৰ ছোৱালী আৰু সকলো শিক্ষাৰ্থীক মৰমেৰে শিকায়।',
       quote3: 'মোৰ শিশুৰ বাবে এয়া নতুন আৰু আনন্দদায়ক অভিজ্ঞতা। আশা কৰোঁ আগলৈ শিকিবলৈ আৰু আত্মবিশ্বাস বঢ়াবলৈ ই সহায় কৰিব।',
+    },
+    team: {
+      label: 'দলৰ সৈতে পৰিচয় কৰক',
+      title: 'SIP Abacus, লখৰাৰ নেতৃত্ব',
+      subtitle: 'গণিত আৰু শিক্ষাৰ প্ৰতি ভালোবাসা গঢ়াৰ বাবে নিবেদিত শিক্ষক-শিক্ষয়িত্ৰী।',
     },
     faqs: {
       eyebrow: 'সঘনাই সোধা প্ৰশ্ন', heading: 'অভিভাৱকসকলে সোধা প্ৰশ্ন',

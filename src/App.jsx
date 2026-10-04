@@ -5,6 +5,7 @@ import AbacusPractice from './components/AbacusPractice.jsx'
 import { About, Programmes, Benefits, GetStarted } from './components/Sections.jsx'
 import Gallery from './components/Gallery.jsx'
 import { Faqs, Feedback } from './components/Faqs.jsx'
+import Team from './components/Team.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
 import MobileBar from './components/MobileBar.jsx'
@@ -103,6 +104,7 @@ export default function App() {
         <GetStarted />
         <Gallery />
         <Feedback />
+        <Team />
         <Faqs />
         <Contact />
       </main>

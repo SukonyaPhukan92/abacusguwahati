@@ -32,6 +32,14 @@ Each push to `main` triggers atomic deployments with zero-downtime updates via N
 
 ## Changelog
 
+### 2026-10-04 (continued)
+- **Meet the Team section added:** New `Team` component displays centre leadership
+  - Principal & Local Centre Leader: Mathura Mohan Roy
+  - Team member photo and role displayed in responsive card layout
+  - New `team` array in `src/config.js` for easy management
+  - Bilingual support in i18n (English: "Meet the Team", Assamese: "দলৰ সৈতে পৰিচয় কৰক")
+  - Section positioned between Gallery and FAQs
+
 ### 2026-10-04
 - **Centre information added:** Class schedules, admission/progression levels, fee structure
   - Hours: Thursday–Friday 5:00 PM; Saturday 10:00 AM, 4:30 PM; Sunday 9:00 AM, 11:30 AM, 4:00 PM
